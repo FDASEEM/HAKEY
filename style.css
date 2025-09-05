@@ -1,3 +1,58 @@
+.hero-botones .btn-login, .hero-botones .btn-registro, .btn-iniciosesion {
+    background-color: #6d4ddf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    margin-top: 0;
+    outline: none;
+}
+.hero-botones .btn-login:hover, .hero-botones .btn-registro:hover {
+    background-color: #6d4ddf;
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+.hero-botones {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    display: flex;
+    gap: 18px;
+    z-index: 10;
+}
+.hero {
+    position: relative;
+}
+.login-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+    align-items: center;
+}
+.btn-restablecer {
+    color: #25d6e2;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.btn-restablecer:hover {
+    color: #1a033f;
+    text-decoration: underline;
+}
+
+
+
+
 .hero_principal {
     background-color: rgb(179, 74, 25);
     color: white;
@@ -11,7 +66,7 @@
     align-items: center;
     justify-content: center;
     min-height: 60vh;
-    background: linear-gradient(200deg, #25d6e2 0%, #1a033f 100%);
+    background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%);
     color: #fff;
     font-family: 'Segoe UI', Arial, sans-serif;
     box-shadow: 0 4px 24px rgba(105, 43, 43, 0.08);
@@ -44,47 +99,98 @@
     flex-direction: column;
     flex-wrap: nowrap;
     min-height: 60vh;
-    background: linear-gradient(2500deg, #25d6e2 0%, #1a033f 100%);
+    background: linear-gradient(2500deg, #6d4ddf 0%, #1a033f 100%);
     color: #fff;
     font-family: 'Segoe UI', Arial, sans-serif;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     text-align: center;
 }
 .juegos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
     margin: 40px auto;
-    max-width: 1000px;
+    max-width: 2000px;
     padding: 0 20px;
 }
 
 .juego-card {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: #222;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.juego-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    z-index: 1;
+    transition: transform 0.2s;
+}
+.juego-card span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(26,3,63,0.92) 80%, rgba(26,3,63,0.2) 100%);
+    color: #fff !important;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 18px 10px 12px 10px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    box-sizing: border-box;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.juego-card:hover img {
+    transform: scale(1.06);
+}
+
+
+.juego-card {
     background: #fff;
-    border-radius: 14px;
+        background: rgba(0,0,0,0.18);
+        border: 1.5px solid #6d4ddf;
     box-shadow: 0 2px 12px rgba(0,0,0,0.10);
     display: flex;
     flex-direction: column;
-    align-items: center;
+        color: #6d4ddf;
     padding: 14px 10px 10px 10px; 
     text-align: center;
     cursor: pointer;
 }
 
-.juego-card:hover {
-    transform: translateY(-6px) scale(1.2);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.16);
+/* Corrección de reglas sueltas y hover del botón login */
+.form-login .btn-login:hover {
+    background: linear-gradient(90deg, #1a033f 0%, #6d4ddf 100%);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
-
-.juego-card img {
-    background-color: #1a033f;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin: 0;
-    display: block;
-    box-shadow: none;
+body.login-bg {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .juego-card span {
@@ -110,7 +216,45 @@
     cursor: pointer;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     outline: none;
-}
+}*/
+
+    .form-login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255,255,255,0.10);
+        padding: 32px 28px 24px 28px;
+        border-radius: 14px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        max-width: 350px;
+        margin: 32px auto 0 auto;
+        gap: 12px;
+    }
+    .form-login label {
+        color: #fff;
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+        align-self: flex-start;
+    }
+    .form-login input[type="text"],
+    .form-login input[type="password"] {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #25d6e2;
+        border-radius: 6px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        outline: none;
+        transition: border 0.2s;
+    }
+    .form-login input[type="text"]:focus,
+    .form-login input[type="password"]:focus {
+        border: 1.5px solid #1a033f;
+    }
+    .form-login .btn-login {
+        width: 100%;
+        margin: 12px 0 0 0;
+    }
     */
 
 button {
