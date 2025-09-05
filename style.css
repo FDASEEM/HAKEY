@@ -70,15 +70,15 @@
     cursor: pointer;
 }
 .juego-card:hover {
-    transform: translateY(-6px) scale(1.4);
+    transform: translateY(-6px) scale(1.2);
     box-shadow: 0 6px 24px rgba(0,0,0,0.16);
 }
 .juego-card img {
     background-color: #1a033f;
     width: 200px;
     height: 200px;
-    object-fit: fill;
-    border-radius: px;
+    object-fit: cover;
+    border-radius: 10px;
     margin-bottom: 0px;
     
 }
