@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section >
+            <div class="botones-login-registro">
+                <button class="btn-login"><a href="login.html">Iniciar Sesión</a></button>
+                <button class="btn-registro"><a href="register.html">Registrarse</a></button>
+
+                </div>
+        </section>
+    <section class="hero">
+        <div class="hero-contenido">
+            <h1>¡Bienvenido a HAKEY!</h1>
+            <p>Las mejores Claves al mejor Precio!</p>
+        </div>
+    </section>
+    <section>
+        <h1>Crear cuenta</h1>
+
+        <form action="/registro" method="POST" autocomplete="on">
+            <div>
+            <label for="name">Nombre</label><br>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required autocomplete="name">
+            </div>
+
+            <div>
+            <label for="email">Correo electrónico</label><br>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required autocomplete="email">
+            </div>
+
+            <div>
+            <label for="password">Contraseña</label><br>
+            <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required minlength="6" autocomplete="new-password">
+            </div>
+
+            <div>
+            <label for="password2">Repetir contraseña</label><br>
+            <input type="password" id="password2" name="password2" placeholder="Repite tu contraseña" required minlength="6" autocomplete="new-password">
+            </div>
+
+            <div>
+            <button type="submit">Registrarme</button>
+            </div>
+
+            <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+        </form>
+    </section>
+</body>
+</html>
