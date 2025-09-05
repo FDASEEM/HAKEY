@@ -1,3 +1,30 @@
+.logo-hakey {
+    display: block;
+    margin: -60px auto 40px auto;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 20px rgba(109, 77, 223, 0.4));
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transform-origin: center;
+    animation: logoFloat 5s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.logo-hakey:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 24px rgba(109, 77, 223, 0.4));
+}
 .hero-botones .btn-login, .hero-botones .btn-registro, .btn-iniciosesion {
     background-color: #6d4ddf;
     color: #fff;
@@ -30,6 +57,11 @@
 }
 .hero {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    overflow: hidden;
 }
 .login-links {
     display: flex;
@@ -78,6 +110,8 @@
     padding: 40px 60px;
     border-radius: 18px;
     box-shadow: 0 2px 12px rgba(156, 19, 19, 0.1);
+    position: relative;
+    z-index: 1;
 }
 
 .hero-contenido h1 {
