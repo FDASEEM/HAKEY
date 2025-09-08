@@ -299,3 +299,7 @@ body.login-bg {
     background-color: #5a3fd2;
     transform: translateY(-2px);
 }
+
+.juego-fondo {
+    background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%);
+}

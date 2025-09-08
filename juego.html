@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk 2077 - HAKEY</title>
+</head>
+<body class="juego-fondo">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="index.html">
+                <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey" class="logo-hakey" style="height: 56px; padding: 5px;">
+            </a>
+            <ul class="right">
+                <li><a href="login.html"><i class="material-icons left">person</i>Iniciar Sesión</a></li>
+                <li><a href="cart.html"><i class="material-icons">shopping_cart</i></a></li>
+            </ul>
+        </div> 
+    </nav>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="transparent z-depth-0">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="index.html" class="breadcrumb black-text">Inicio</a>
+                    <a href="#!" class="breadcrumb black-text">Juegos</a>
+                    <a href="#!" class="breadcrumb black-text">Cyberpunk 2077</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <!-- Carousel de imágenes -->
+            <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!">
+        <img src="https://files.gamesfull.app/uploads/image/2020/12/Cyberpunk-2077.jpg" class="responsive-img" style="margin: 0 auto;">
+    </a>
+    <a class="carousel-item" href="#two!">
+        <img src="https://files.gamesfull.app/uploads/gallery/2020/12/1-Cyberpunk-2077-300x169.jpg" class="responsive-img" style="margin: 0 auto;">
+    </a>
+    <a class="carousel-item" href="#three!">
+        <img src="https://files.gamesfull.app/uploads/gallery/2020/12/4-Cyberpunk-2077-300x169.jpg" class="responsive-img" style="margin: 0 auto;">
+    </a>
+    <a class="carousel-item" href="#four!">
+        <img src="https://files.gamesfull.app/uploads/gallery/2020/12/3-Cyberpunk-2077-300x169.jpg" class="responsive-img" style="margin: 0 auto;">
+    </a>
+</div>
+            </div>
+
+            <!-- Información de compra -->
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Cyberpunk 2077</span>
+                        <p class="price-tag">$29.99 USD</p>
+                        <p class="grey-text">Desarrollador: CD PROJEKT RED</p>
+                        <p class="grey-text">Género: RPG, Acción, Mundo Abierto</p>
+                        <a class="waves-effect waves-light btn-large btn-buy white-text" style="width: 100%; margin-top: 20px;">
+                            <i class="material-icons left">shopping_cart</i>
+                            Añadir al carrito
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs de información -->
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#descripcion">Descripción</a></li>
+                    <li class="tab col s3"><a href="#requisitos">Requisitos</a></li>
+                    <li class="tab col s3"><a href="#reviews">Reseñas</a></li>
+                </ul>
+            </div>
+            <div id="descripcion" class="col s12">
+                <h5>Descripción</h5>
+                <p>Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamour y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad.</p>
+            </div>
+            <div id="requisitos" class="col s12">
+                <h5>Requisitos del Sistema</h5>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <h6>Mínimos:</h6>
+                        <ul class="browser-default">
+                            <li>Sistema: Windows 10</li>
+                            <li>Procesador: Intel Core i5-3570K</li>
+                            <li>Memoria: 8 GB RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 970</li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m6">
+                        <h6>Recomendados:</h6>
+                        <ul class="browser-default">
+                            <li>Sistema: Windows 10</li>
+                            <li>Procesador: Intel Core i7-4790</li>
+                            <li>Memoria: 12 GB RAM</li>
+                            <li>Gráficos: NVIDIA GeForce GTX 1060</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="reviews" class="col s12">
+                <h5>Reseñas de usuarios</h5>
+                <!-- Aquí irían las reseñas de usuarios -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar carousel
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true,
+                indicators: true
+            });
+
+            // Inicializar tabs
+            var tabs = document.querySelectorAll('.tabs');
+            var instance = M.Tabs.init(tabs);
+        });
+    </script>
+</body>
+</html>
