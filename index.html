@@ -9,6 +9,30 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class="purple darken-3">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey" class="logo-hakey" style="height: 56px; padding: 5px;">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="catalogo.html" class="waves-effect waves-light">Ver todos los juegos</a></li>
+                <li><a href="#" class="waves-effect waves-light">Ofertas</a></li>
+                <li><a href="#" class="waves-effect waves-light">PC Games</a></li>
+                <li><a href="#" class="waves-effect waves-light">Xbox</a></li>
+                <li><a href="#" class="waves-effect waves-light">PS5</a></li>
+            </ul>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="catalogo.html">Ver todos los juegos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">PC Games</a></li>
+        <li><a href="#">Xbox</a></li>
+        <li><a href="#">PS5</a></li>
+    </ul>
+
     <section class="hero">
         <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey" class="logo-hakey">
         <div class="botones-login-registro hero-botones">
@@ -167,6 +191,52 @@
     </footer>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+
+            const grid = document.getElementById('homeGrid');
+            if (!grid) return; // Exit if grid not found
+
+            function stars(rating) {
+                const full = Math.floor(rating || 0);
+                const half = (rating || 0) % 1 >= 0.5 ? 1 : 0;
+                const empty = 5 - full - half;
+                return `${'<i class="material-icons yellow-text" style="font-size:18px;">star</i>'.repeat(full)}${half ? '<i class="material-icons yellow-text" style="font-size:18px;">star_half</i>' : ''}${'<i class="material-icons yellow-text" style="font-size:18px;">star_border</i>'.repeat(empty)}`;
+            }
+            function firstImage(g) {
+                return Array.isArray(g.images) && g.images.length ? g.images[0] : 'https://via.placeholder.com/600x400/1a033f/ffffff?text=Juego';
+            }
+
+            (async function loadHomeGames() {
+                try {
+                    const res = await fetch('games.json');
+                    const games = await res.json();
+                    const list = Object.entries(games).slice(0, 8).map(([id, g]) => ({ id, ...g }));
+
+                    const df = document.createDocumentFragment();
+                    list.forEach(g => {
+                        const a = document.createElement('a');
+                        a.href = `game.html?id=${g.id}`;
+                        a.className = 'juego-card';
+                        a.innerHTML = `
+                            <img src="${firstImage(g)}" alt="${g.title}">
+                            <div class="juego-info">
+                                <span class="juego-titulo">${g.title}</span>
+                                <div class="juego-rating">${stars(g.rating || 0)}</div>
+                            </div>
+                        `;
+                        df.appendChild(a);
+                    });
+                    grid.innerHTML = '';
+                    grid.appendChild(df);
+                } catch (e) {
+                    console.error('No se pudo cargar games.json', e);
+                }
+            })();
+        });
+      </script>
 </body>
 
 

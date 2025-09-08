@@ -1,6 +1,6 @@
 .logo-hakey {
     display: block;
-    margin: -60px auto 40px auto;
+    margin: 20px auto 40px auto; /* Ajustado el margin-top a 20px */
     max-width: 420px;
     width: 100%;
     height: auto;
@@ -25,6 +25,7 @@
     transform: scale(1.05);
     filter: drop-shadow(0 8px 24px rgba(109, 77, 223, 0.4));
 }
+
 .hero-botones .btn-login, .hero-botones .btn-registro, .btn-iniciosesion {
     background-color: #6d4ddf;
     color: #fff;
@@ -55,53 +56,28 @@
     gap: 18px;
     z-index: 10;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Eliminar el margen predeterminado del body */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Mover aquí la fuente general */
+}
+
 .hero {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40px;
+    justify-content: center; /* Centrar verticalmente el contenido del hero */
+    flex-grow: 1; /* Permite que el hero ocupe el espacio restante */
+    width: 100%; /* Asegura que el hero ocupe todo el ancho */
+    padding-top: 0; /* Eliminar padding-top, ya que el nav está arriba */
     overflow: hidden;
-}
-.login-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 18px;
-    align-items: center;
-}
-.btn-restablecer {
-    color: #6d4ddf; /* Morado principal */
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-.btn-restablecer:hover {
-    color: #1a033f; /* Morado oscuro al pasar el mouse */
-    text-decoration: underline;
-}
-
-
-
-
-.hero_principal {
-    background-color: rgb(179, 74, 25);
-    color: white;
-    text-align: center;
-    padding: 50px;
-    font-family: Arial, sans-serif;
-}
-
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 60vh;
     background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%);
     color: #fff;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    box-shadow: 0 4px 24px rgba(105, 43, 43, 0.08);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
 .hero-contenido {
@@ -112,6 +88,8 @@
     box-shadow: 0 2px 12px rgba(156, 19, 19, 0.1);
     position: relative;
     z-index: 1;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
 }
 
 .hero-contenido h1 {
@@ -209,33 +187,18 @@
     transform: scale(1.06);
 }
 
-
-.juego-card {
-    background: #fff;
-        background: rgba(0,0,0,0.18);
-        border: 1.5px solid #6d4ddf;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    display: flex;
-    flex-direction: column;
-        color: #6d4ddf;
-    padding: 14px 10px 10px 10px;
-    text-align: center;
-    cursor: pointer;
-}
-
-/* Corrección de reglas sueltas y hover del botón login */
 .form-login .btn-login:hover {
     background: linear-gradient(90deg, #1a033f 0%, #6d4ddf 100%);
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
+
 body.login-bg {
     min-height: 100vh;
     width: 100vw;
     background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%);
     display: flex;
     flex-direction: column;
-    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .login-bg > section {
@@ -259,8 +222,6 @@ body.login-bg {
     font-weight: 700;
     text-align: center;
 }
-
-/* Eliminar o comentar las reglas duplicadas anteriores y usar estas */
 
 .form-login {
     max-width: 380px;
