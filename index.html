@@ -21,17 +21,29 @@
                 <li><a href="#" class="waves-effect waves-light">Xbox</a></li>
                 <li><a href="#" class="waves-effect waves-light">PS5</a></li>
             </ul>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
     </nav>
 
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="catalogo.html">Ver todos los juegos</a></li>
-        <li><a href="#">Ofertas</a></li>
-        <li><a href="#">PC Games</a></li>
-        <li><a href="#">Xbox</a></li>
-        <li><a href="#">PS5</a></li>
+    <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="assets/img/cover-1920-bd460362.jpg"> <!-- Imagen de fondo -->
+          </div>
+          <a href="#user"><img class="circle" src="https://via.placeholder.com/60x60/B0B0B0/FFFFFF?text=U"></a> <!-- Silueta gris para usuario no registrado -->
+          <a href="login.html"><span class="white-text name">Acceder</span></a>
+          <a href="registro.html"><span class="white-text email">Registrarse</span></a>
+        </div></li>
+        <li><a href="catalogo.html" class="waves-effect waves-light"><i class="material-icons">games</i>Ver todos los juegos</a></li>
+        <li><a href="#" class="waves-effect waves-light"><i class="material-icons">local_offer</i>Ofertas</a></li>
+        <li><a href="#" class="waves-effect waves-light"><i class="material-icons">desktop_windows</i>PC Games</a></li>
+        <li><a href="#" class="waves-effect waves-light"><i class="material-icons">videogame_asset</i>Xbox</a></li>
+        <li><a href="#" class="waves-effect waves-light"><i class="material-icons">sports_esports</i>PS5</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Cuenta</a></li>
+        <li><a class="waves-effect" href="login.html"><i class="material-icons">person</i>Iniciar Sesión</a></li>
+        <li><a class="waves-effect" href="registro.html"><i class="material-icons">person_add</i>Registrarse</a></li>
     </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
     <section class="hero">
         <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey" class="logo-hakey">
@@ -206,6 +218,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar sidenav
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems);
 
