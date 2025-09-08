@@ -72,6 +72,11 @@
                                 <h4 class="purple-text text-darken-3" style="margin: 10px 0; font-weight: 700;">$29.99 USD</h4>
                             </div>
                         </div>
+                        <div class="row" style="margin-top: 5px; margin-bottom: 0;">
+                            <div class="col s12">
+                                <div id="ratingContainer" class="rating" style="display:flex; align-items:center; gap:4px;"></div>
+                            </div>
+                        </div>
                         <div class="row" style="margin-bottom: 0;">
                             <div class="col s12">
                                 <p class="grey-text text-darken-2" style="margin: 5px 0;">
@@ -270,6 +275,26 @@
             var sidenav = document.querySelectorAll('.sidenav');
             var sidenavInstances = M.Sidenav.init(sidenav);
         });
+
+        // Cargar rating dinámico según el id del juego
+        (async function loadRating() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const id = params.get('id') || 'cyberpunk-2077';
+                const res = await fetch('games.json');
+                const games = await res.json();
+                const game = games[id];
+                const rating = game && typeof game.rating === 'number' ? game.rating : 0;
+                const full = Math.floor(rating);
+                const half = rating % 1 >= 0.5 ? 1 : 0;
+                const empty = 5 - full - half;
+                const starsHtml = `${'<i class="material-icons yellow-text">star</i>'.repeat(full)}${half ? '<i class="material-icons yellow-text">star_half</i>' : ''}${'<i class=\"material-icons yellow-text\">star_border</i>'.repeat(empty)} <small class="grey-text text-darken-1" style="margin-left:6px;">${rating.toFixed(1)}/5</small>`;
+                const container = document.getElementById('ratingContainer');
+                if (container) container.innerHTML = starsHtml;
+            } catch (e) {
+                console.error('No se pudo cargar el rating', e);
+            }
+        })();
     </script>
 </body>
 </html>
