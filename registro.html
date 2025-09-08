@@ -8,22 +8,46 @@
 </head>
 <body class="login-bg">
     <section>
+        <a href="index.html"></a>
         <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey" class="logo-hakey">
-        
+        </a>
         <form class="form-login" action="/registro" method="POST" autocomplete="on">
             <h1>Crear cuenta</h1>
 
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="name" placeholder="Ej: Tu nombre" required autocomplete="name">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required autocomplete="given-name">
+            </div>
 
-            <label for="usuario">Correo electrónico</label>
-            <input type="password" id="usuario" name="usuario" required autocomplete="current-password" placeholder="Ej: tucorreo@ejemplo.com">
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" required autocomplete="family-name">
+            </div>
 
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required minlength="6" autocomplete="new-password">
+            <div class="form-group">
+                <label for="rut">RUT</label>
+                <input type="text" id="rut" name="rut" placeholder="Ej: 12.345.678-9" required>
+            </div>
 
-            <label for="password2">Repetir contraseña</label>
-            <input type="password" id="password2" name="password2" placeholder="Repite tu contraseña" required minlength="6" autocomplete="new-password">
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ej: tucorreo@ejemplo.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Número de teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +56 9 1234 5678" required autocomplete="tel">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required minlength="6" autocomplete="new-password">
+            </div>
+
+            <div class="form-group">
+                <label for="password2">Repetir contraseña</label>
+                <input type="password" id="password2" name="password2" placeholder="Repite tu contraseña" required minlength="6" autocomplete="new-password">
+            </div>
 
             <button type="submit" class="btn-iniciosesion">Registrarme</button>
 
@@ -32,5 +56,6 @@
             </div>
         </form>
     </section>
+    <script src="assets/main.js"></script>
 </body>
 </html>

@@ -234,94 +234,68 @@ body.login-bg {
     text-align: center;
 }
 
+/* Eliminar o comentar las reglas duplicadas anteriores y usar estas */
 
+.form-login {
+    max-width: 380px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.10);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    margin: 32px auto 0 auto;
+}
 
-/*.btn-login, .btn-registro {
-    background-color: #e0edee;
-    color: #aca8a8;
+.form-login .form-group {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.form-login input[type="text"],
+.form-login input[type="email"],
+.form-login input[type="tel"],
+.form-login input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #25d6e2;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+.form-login input:focus {
+    border: 1.5px solid #1a033f;
+    background: rgba(255,255,255,0.25);
+}
+
+.form-login label {
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.form-login button[type="submit"] {
+    width: 100%;
+    margin: 16px 0 8px 0;
+    padding: 12px;
+    background-color: #6d4ddf;
+    color: #fff;
     border: none;
     border-radius: 8px;
-    padding: 12px 32px;
-    margin: 0 12px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 1px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-    outline: none;
-}*/
-
-    .form-login {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: rgba(255,255,255,0.10);
-        padding: 32px 28px 24px 28px;
-        border-radius: 14px;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-        max-width: 350px;
-        margin: 32px auto 0 auto;
-        gap: 12px;
-    }
-    .form-login label {
-        color: #fff;
-        font-size: 1.1rem;
-        margin-bottom: 4px;
-        align-self: flex-start;
-    }
-    .form-login input[type="text"],
-    .form-login input[type="password"] {
-        width: 100%;
-        padding: 10px 12px;
-        border: 1px solid #25d6e2;
-        border-radius: 6px;
-        font-size: 1rem;
-        margin-bottom: 10px;
-        outline: none;
-        transition: border 0.2s;
-    }
-    .form-login input[type="text"]:focus,
-    .form-login input[type="password"]:focus {
-        border: 1.5px solid #1a033f;
-    }
-    .form-login .btn-login {
-        width: 100%;
-        margin: 12px 0 0 0;
-    }
-    */
-
-button {
-  padding: 12px 24px;
-  margin: 10px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease;
-  text-decoration: none;
+    transition: all 0.2s;
 }
 
-/* Botón de inicio de sesión */
-.btn-login {
-  background-color: #3498db;
-  color: white;
-}
-
-.btn-login:hover {
-  background-color: #2980b9;
-  transform: scale(1.05);
-}
-
-/* Botón de registro */
-.btn-registro {
-  background-color: #2ecc71;
-  color: white;
-}
-
-.btn-registro:hover {
-  background-color: #27ae60;
-  transform: scale(1.05);
+.form-login button[type="submit"]:hover {
+    background-color: #5a3fd2;
+    transform: translateY(-2px);
 }
