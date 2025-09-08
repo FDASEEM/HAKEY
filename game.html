@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberpunk 2077 - HAKEY</title>
+    <title>HAKEY - Juego</title>
 </head>
 <body class="juego-fondo">
     <nav class="purple darken-3">
@@ -33,7 +33,7 @@
                 <div class="col s12">
                     <a href="index.html" class="breadcrumb white-text">Inicio</a>
                     <a href="#!" class="breadcrumb white-text">Juegos</a>
-                    <a href="#!" class="breadcrumb white-text">Cyberpunk 2077</a>
+                    <a href="#!" class="breadcrumb white-text" id="game-breadcrumb">Cargando...</a>
                 </div>
             </div>
         </nav>
@@ -43,19 +43,8 @@
             <div class="col s12 m8">
                 <div class="card">
                     <div class="card-content" style="padding: 0;">
-                        <div class="carousel carousel-slider center" data-indicators="true">
-                            <div class="carousel-item" href="#one!">
-                                <img src="https://files.gamesfull.app/uploads/image/2020/12/Cyberpunk-2077.jpg" class="responsive-img" style="height: 400px; object-fit: cover;">
-                            </div>
-                            <div class="carousel-item" href="#two!">
-                                <img src="https://files.gamesfull.app/uploads/gallery/2020/12/1-Cyberpunk-2077-300x169.jpg" class="responsive-img" style="height: 400px; object-fit: cover;">
-                            </div>
-                            <div class="carousel-item" href="#three!">
-                                <img src="https://files.gamesfull.app/uploads/gallery/2020/12/4-Cyberpunk-2077-300x169.jpg" class="responsive-img" style="height: 400px; object-fit: cover;">
-                            </div>
-                            <div class="carousel-item" href="#four!">
-                                <img src="https://files.gamesfull.app/uploads/gallery/2020/12/3-Cyberpunk-2077-300x169.jpg" class="responsive-img" style="height: 400px; object-fit: cover;">
-                            </div>
+                        <div class="carousel carousel-slider center" data-indicators="true" id="game-carousel">
+                            <!-- Las imágenes se cargarán dinámicamente -->
                         </div>
                     </div>
                 </div>
@@ -65,28 +54,28 @@
             <div class="col s12 m4">
                 <div class="card hoverable">
                     <div class="card-content">
-                        <span class="card-title purple-text text-darken-3" style="font-size: 1.8rem; font-weight: 600;">Cyberpunk 2077</span>
+                        <span class="card-title purple-text text-darken-3" style="font-size: 1.8rem; font-weight: 600;" id="game-title">Cargando...</span>
                         <div class="divider" style="margin: 15px 0;"></div>
                         <div class="row" style="margin-bottom: 0;">
                             <div class="col s12">
-                                <h4 class="purple-text text-darken-3" style="margin: 10px 0; font-weight: 700;">$29.99 USD</h4>
+                                <h4 class="purple-text text-darken-3" style="margin: 10px 0; font-weight: 700;" id="game-price">$0.00 USD</h4>
                             </div>
                         </div>
                         <div class="row" style="margin-bottom: 0;">
                             <div class="col s12">
                                 <p class="grey-text text-darken-2" style="margin: 5px 0;">
                                     <i class="material-icons tiny left">developer_mode</i>
-                                    Desarrollador: CD PROJEKT RED
+                                    Desarrollador: <span id="game-developer">Cargando...</span>
                                 </p>
                                 <p class="grey-text text-darken-2" style="margin: 5px 0;">
                                     <i class="material-icons tiny left">category</i>
-                                    Género: RPG, Acción, Mundo Abierto
+                                    Género: <span id="game-genre">Cargando...</span>
                                 </p>
                             </div>
                         </div>
                         <div class="row" style="margin-top: 20px;">
                             <div class="col s12">
-                                <a class="waves-effect waves-light btn-large purple darken-3 white-text" style="width: 100%;">
+                                <a class="waves-effect waves-light btn-large purple darken-3 white-text" style="width: 100%;" id="add-to-cart-btn">
                                     <i class="material-icons left">shopping_cart</i>
                                     Añadir al carrito
                                 </a>
@@ -144,23 +133,21 @@
                             <i class="material-icons left">description</i>Descripción del Juego
                         </h5>
                         <div class="divider" style="margin: 15px 0;"></div>
-                        <p class="flow-text" style="line-height: 1.6;">
-                            Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, 
-                            una megalópolis obsesionada con el poder, el glamour y la modificación corporal. Tu personaje es V, 
-                            un mercenario que persigue un implante único que permite alcanzar la inmortalidad.
+                        <p class="flow-text" style="line-height: 1.6;" id="game-description">
+                            Cargando descripción...
                         </p>
                         <div class="row" style="margin-top: 20px;">
                             <div class="col s12 m6">
                                 <h6 class="purple-text text-darken-3">
                                     <i class="material-icons left">schedule</i>Duración
                                 </h6>
-                                <p class="grey-text text-darken-2">25-30 horas (historia principal)</p>
+                                <p class="grey-text text-darken-2" id="game-duration">Cargando...</p>
                             </div>
                             <div class="col s12 m6">
                                 <h6 class="purple-text text-darken-3">
                                     <i class="material-icons left">language</i>Idiomas
                                 </h6>
-                                <p class="grey-text text-darken-2">Español, Inglés, Francés, Alemán</p>
+                                <p class="grey-text text-darken-2" id="game-languages">Cargando...</p>
                             </div>
                         </div>
                     </div>
@@ -180,13 +167,8 @@
                                     <h6 class="red-text text-darken-3">
                                         <i class="material-icons left">warning</i>Requisitos Mínimos
                                     </h6>
-                                    <ul class="browser-default">
-                                        <li><strong>Sistema:</strong> Windows 10</li>
-                                        <li><strong>Procesador:</strong> Intel Core i5-3570K</li>
-                                        <li><strong>Memoria:</strong> 8 GB RAM</li>
-                                        <li><strong>Gráficos:</strong> NVIDIA GeForce GTX 970</li>
-                                        <li><strong>DirectX:</strong> Versión 12</li>
-                                        <li><strong>Almacenamiento:</strong> 70 GB disponibles</li>
+                                    <ul class="browser-default" id="min-requirements">
+                                        <li>Cargando requisitos...</li>
                                     </ul>
                                 </div>
                             </div>
@@ -195,13 +177,8 @@
                                     <h6 class="green-text text-darken-3">
                                         <i class="material-icons left">check_circle</i>Requisitos Recomendados
                                     </h6>
-                                    <ul class="browser-default">
-                                        <li><strong>Sistema:</strong> Windows 10</li>
-                                        <li><strong>Procesador:</strong> Intel Core i7-4790</li>
-                                        <li><strong>Memoria:</strong> 12 GB RAM</li>
-                                        <li><strong>Gráficos:</strong> NVIDIA GeForce GTX 1060</li>
-                                        <li><strong>DirectX:</strong> Versión 12</li>
-                                        <li><strong>Almacenamiento:</strong> 70 GB disponibles</li>
+                                    <ul class="browser-default" id="rec-requirements">
+                                        <li>Cargando requisitos...</li>
                                     </ul>
                                 </div>
                             </div>
@@ -254,7 +231,108 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        // Variable para almacenar la base de datos de juegos
+        let gamesDatabase = {};
+
+        // Función para cargar datos de juegos desde JSON
+        async function loadGamesDatabase() {
+            try {
+                const response = await fetch('games.json');
+                gamesDatabase = await response.json();
+            } catch (error) {
+                console.error('Error cargando la base de datos de juegos:', error);
+                // Fallback a datos básicos
+                gamesDatabase = {
+                    'cyberpunk-2077': {
+                        title: 'Cyberpunk 2077',
+                        price: '$29.99 USD',
+                        developer: 'CD PROJEKT RED',
+                        genre: 'RPG, Acción, Mundo Abierto',
+                        description: 'Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City.',
+                        duration: '25-30 horas',
+                        languages: 'Español, Inglés',
+                        images: ['https://files.gamesfull.app/uploads/image/2020/12/Cyberpunk-2077.jpg'],
+                        minRequirements: ['Sistema: Windows 10'],
+                        recRequirements: ['Sistema: Windows 10']
+                    }
+                };
+            }
+        }
+
+        // Función para obtener parámetros de URL
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Función para cargar información del juego
+        function loadGameInfo() {
+            const gameId = getUrlParameter('id') || 'cyberpunk-2077';
+            const game = gamesDatabase[gameId];
+
+            if (!game) {
+                // Si no se encuentra el juego, redirigir a la página principal
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Actualizar título de la página
+            document.title = `${game.title} - HAKEY`;
+
+            // Actualizar breadcrumb
+            document.getElementById('game-breadcrumb').textContent = game.title;
+
+            // Actualizar información básica
+            document.getElementById('game-title').textContent = game.title;
+            document.getElementById('game-price').textContent = game.price;
+            document.getElementById('game-developer').textContent = game.developer;
+            document.getElementById('game-genre').textContent = game.genre;
+            document.getElementById('game-description').textContent = game.description;
+            document.getElementById('game-duration').textContent = game.duration;
+            document.getElementById('game-languages').textContent = game.languages;
+
+            // Actualizar carousel
+            const carousel = document.getElementById('game-carousel');
+            carousel.innerHTML = '';
+            game.images.forEach((imageSrc, index) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.className = 'carousel-item';
+                carouselItem.innerHTML = `<img src="${imageSrc}" class="responsive-img" style="height: 400px; object-fit: cover;">`;
+                carousel.appendChild(carouselItem);
+            });
+
+            // Actualizar requisitos
+            const minReqList = document.getElementById('min-requirements');
+            const recReqList = document.getElementById('rec-requirements');
+            
+            minReqList.innerHTML = '';
+            game.minRequirements.forEach(req => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${req.split(':')[0]}:</strong> ${req.split(':')[1]}`;
+                minReqList.appendChild(li);
+            });
+
+            recReqList.innerHTML = '';
+            game.recRequirements.forEach(req => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${req.split(':')[0]}:</strong> ${req.split(':')[1]}`;
+                recReqList.appendChild(li);
+            });
+
+            // Actualizar botón de añadir al carrito
+            document.getElementById('add-to-cart-btn').onclick = function() {
+                // Aquí puedes añadir lógica para el carrito
+                M.toast({html: `${game.title} añadido al carrito!`, classes: 'purple darken-3'});
+            };
+        }
+
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Cargar base de datos de juegos primero
+            await loadGamesDatabase();
+            
+            // Cargar información del juego
+            loadGameInfo();
+
             // Inicializar carousel
             var elems = document.querySelectorAll('.carousel');
             var instances = M.Carousel.init(elems, {

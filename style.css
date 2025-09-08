@@ -163,6 +163,8 @@
     align-items: flex-end;
     justify-content: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
 }
 .juego-card img {
     position: absolute;

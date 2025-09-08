@@ -1,0 +1,126 @@
+{
+  "cyberpunk-2077": {
+    "title": "Cyberpunk 2077",
+    "price": "$29.99 USD",
+    "developer": "CD PROJEKT RED",
+    "genre": "RPG, Acción, Mundo Abierto",
+    "description": "Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, una megalópolis obsesionada con el poder, el glamour y la modificación corporal. Tu personaje es V, un mercenario que persigue un implante único que permite alcanzar la inmortalidad.",
+    "duration": "25-30 horas (historia principal)",
+    "languages": "Español, Inglés, Francés, Alemán",
+    "images": [
+      "https://files.gamesfull.app/uploads/image/2020/12/Cyberpunk-2077.jpg",
+      "https://files.gamesfull.app/uploads/gallery/2020/12/1-Cyberpunk-2077-300x169.jpg",
+      "https://files.gamesfull.app/uploads/gallery/2020/12/4-Cyberpunk-2077-300x169.jpg",
+      "https://files.gamesfull.app/uploads/gallery/2020/12/3-Cyberpunk-2077-300x169.jpg"
+    ],
+    "minRequirements": [
+      "Sistema: Windows 10",
+      "Procesador: Intel Core i5-3570K",
+      "Memoria: 8 GB RAM",
+      "Gráficos: NVIDIA GeForce GTX 970",
+      "DirectX: Versión 12",
+      "Almacenamiento: 70 GB disponibles"
+    ],
+    "recRequirements": [
+      "Sistema: Windows 10",
+      "Procesador: Intel Core i7-4790",
+      "Memoria: 12 GB RAM",
+      "Gráficos: NVIDIA GeForce GTX 1060",
+      "DirectX: Versión 12",
+      "Almacenamiento: 70 GB disponibles"
+    ]
+  },
+  "red-dead-redemption-2": {
+    "title": "Red Dead Redemption 2",
+    "price": "$39.99 USD",
+    "developer": "Rockstar Games",
+    "genre": "Acción, Aventura, Mundo Abierto",
+    "description": "Red Dead Redemption 2 es una épica historia de vida en el corazón de Estados Unidos a finales del siglo XIX. La historia sigue a Arthur Morgan y la banda de Van der Linde mientras huyen por toda América en una época donde los forajidos están muriendo.",
+    "duration": "60+ horas (historia principal)",
+    "languages": "Español, Inglés, Francés, Alemán, Italiano",
+    "images": [
+      "assets/img/red-dead-redemption-2-2019101812583956_1.jpg",
+      "https://via.placeholder.com/800x400/8B0000/FFFFFF?text=RDR2+1",
+      "https://via.placeholder.com/800x400/8B0000/FFFFFF?text=RDR2+2",
+      "https://via.placeholder.com/800x400/8B0000/FFFFFF?text=RDR2+3"
+    ],
+    "minRequirements": [
+      "Sistema: Windows 10",
+      "Procesador: Intel Core i5-2500K",
+      "Memoria: 8 GB RAM",
+      "Gráficos: NVIDIA GeForce GTX 770",
+      "DirectX: Versión 12",
+      "Almacenamiento: 150 GB disponibles"
+    ],
+    "recRequirements": [
+      "Sistema: Windows 10",
+      "Procesador: Intel Core i7-4770K",
+      "Memoria: 12 GB RAM",
+      "Gráficos: NVIDIA GeForce GTX 1060",
+      "DirectX: Versión 12",
+      "Almacenamiento: 150 GB disponibles"
+    ]
+  },
+  "hollow-knight-silksong": {
+    "title": "Hollow Knight: Silksong",
+    "price": "$19.99 USD",
+    "developer": "Team Cherry",
+    "genre": "Metroidvania, Plataformas, Acción",
+    "description": "Hollow Knight: Silksong es la secuela del aclamado Hollow Knight. Juega como Hornet, princesa-protectora de Hallownest, en una aventura épica que te llevará a través de un reino completamente nuevo.",
+    "duration": "15-20 horas (historia principal)",
+    "languages": "Español, Inglés, Francés, Alemán, Japonés",
+    "images": [
+      "assets/img/60eebc8f7133f685eddbffbe43c8da617ba0a5d699f2008f9c31c6119d1792af.avif",
+      "https://via.placeholder.com/800x400/4A148C/FFFFFF?text=HK+1",
+      "https://via.placeholder.com/800x400/4A148C/FFFFFF?text=HK+2",
+      "https://via.placeholder.com/800x400/4A148C/FFFFFF?text=HK+3"
+    ],
+    "minRequirements": [
+      "Sistema: Windows 10",
+      "Procesador: Intel Core i3-2100",
+      "Memoria: 4 GB RAM",
+      "Gráficos: NVIDIA GeForce GTX 460",
+      "DirectX: Versión 11",
+      "Almacenamiento: 5 GB disponibles"
+    ],
+    "recRequirements": [
+      "Sistema: Windows 10",
+      "Procesador: Intel Core i5-3470",
+      "Memoria: 8 GB RAM",
+      "Gráficos: NVIDIA GeForce GTX 750",
+      "DirectX: Versión 11",
+      "Almacenamiento: 5 GB disponibles"
+    ]
+  },
+  "donkey-kong-bananza": {
+    "title": "Donkey Kong Bananza",
+    "price": "$24.99 USD",
+    "developer": "Nintendo",
+    "genre": "Plataformas, Aventura",
+    "description": "Donkey Kong Bananza es una aventura épica donde Donkey Kong y sus amigos deben salvar su hogar de una amenaza misteriosa. Explora mundos coloridos, resuelve puzzles y disfruta de la música característica de la serie.",
+    "duration": "20-25 horas (historia principal)",
+    "languages": "Español, Inglés, Francés, Alemán, Japonés",
+    "images": [
+      "assets/img/a1f52cd7-cb5b-4244-bb09-19c19229eaf5_16-9-aspect-ratio_default_1051359.jpg",
+      "https://via.placeholder.com/800x400/FFD700/000000?text=DK+1",
+      "https://via.placeholder.com/800x400/FFD700/000000?text=DK+2",
+      "https://via.placeholder.com/800x400/FFD700/000000?text=DK+3"
+    ],
+    "minRequirements": [
+      "Sistema: Windows 10",
+      "Procesador: Intel Core i3-2100",
+      "Memoria: 4 GB RAM",
+      "Gráficos: NVIDIA GeForce GTX 460",
+      "DirectX: Versión 11",
+      "Almacenamiento: 8 GB disponibles"
+    ],
+    "recRequirements": [
+      "Sistema: Windows 10",
+      "Procesador: Intel Core i5-3470",
+      "Memoria: 8 GB RAM",
+      "Gráficos: NVIDIA GeForce GTX 750",
+      "DirectX: Versión 11",
+      "Almacenamiento: 8 GB disponibles"
+    ]
+  }
+}
