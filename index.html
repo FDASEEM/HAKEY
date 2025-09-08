@@ -45,6 +45,19 @@
         </div>
     </section>
 
+    <section class="carousel-section">
+        <div class="container">
+            <h2 class="center-align white-text" style="font-weight: 700; margin-bottom: 30px;">Juegos en Oferta</h2>
+            <div class="carousel">
+                <a class="carousel-item" href="game.html?id=elden-ring"><img src="https://files.gamesfull.app/uploads/image/2022/02/ELDEN-RING.jpg"></a>
+                <a class="carousel-item" href="game.html?id=the-witcher-3"><img src="https://files.gamesfull.app/uploads/image/2020/05/the-witcher-3-wild-hunt-goty-2923-poster.jpg"></a>
+                <a class="carousel-item" href="game.html?id=cyberpunk-2077"><img src="https://files.gamesfull.app/uploads/image/2020/12/Cyberpunk-2077.jpg"></a>
+                <a class="carousel-item" href="game.html?id=god-of-war"><img src="https://files.gamesfull.app/uploads/image/2022/01/God-of-War.jpg"></a>
+                <a class="carousel-item" href="game.html?id=minecraft"><img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg"></a>
+            </div>
+        </div>
+    </section>
+
     <section class="Juegos-Recomendados" id="catalogo">
             <div>
                 <h1>Juegos Recomendados!</h1>
@@ -195,6 +208,20 @@
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems);
+
+            var carouselElems = document.querySelectorAll('.carousel');
+            var carouselInstances = M.Carousel.init(carouselElems, {
+                fullWidth: false, // Quitar fullWidth para que Materialize lo centre mejor dentro del container
+                indicators: true,
+                duration: 200,
+                numVisible: 5, // 5 juegos visibles
+                // Eliminar dist y padding para usar el comportamiento por defecto
+            });
+
+            // Auto-avanzar carrusel
+            setInterval(function() {
+                carouselInstances[0].next();
+            }, 4000); // Cambia cada 4 segundos
 
             const grid = document.getElementById('homeGrid');
             if (!grid) return; // Exit if grid not found

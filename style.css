@@ -63,6 +63,8 @@ body {
     min-height: 100vh;
     margin: 0; /* Eliminar el margen predeterminado del body */
     font-family: 'Segoe UI', Arial, sans-serif; /* Mover aquí la fuente general */
+    background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%); /* Fondo unificado */
+    color: #fff; /* Color de texto por defecto para el body */
 }
 
 .hero {
@@ -75,8 +77,8 @@ body {
     width: 100%; /* Asegura que el hero ocupe todo el ancho */
     padding-top: 0; /* Eliminar padding-top, ya que el nav está arriba */
     overflow: hidden;
-    background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%);
-    color: #fff;
+    /* background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%); */
+    /* color: #fff; */
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
@@ -111,12 +113,17 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     min-height: 60vh;
-    background: linear-gradient(2500deg, #6d4ddf 0%, #1a033f 100%);
-    color: #fff;
+    /* background: linear-gradient(2500deg, #6d4ddf 0%, #1a033f 100%); */
+    /* color: #fff; */
     font-family: 'Segoe UI', Arial, sans-serif;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     text-align: center;
 }
+
+
+
+
+
 .juegos-grid {
     display: flex;
     flex-wrap: wrap;
