@@ -20,44 +20,36 @@
                                     <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey" class="responsive-img" style="max-width: 220px; margin: 8px auto 16px auto; display:block;">
                                 </a>
                             </div>
-                            <form class="form-login" action="/registro" method="POST" autocomplete="on">
-                                <h5 class="purple-text text-darken-3" style="font-weight: 700;">Crear cuenta</h5>
-
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required autocomplete="given-name">
-            </div>
-
-            <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" required autocomplete="family-name">
-            </div>
-
-            <div class="form-group">
-                <label for="rut">RUT</label>
-                <input type="text" id="rut" name="rut" placeholder="Ej: 12.345.678-9" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" placeholder="Ej: tucorreo@ejemplo.com" required autocomplete="email">
-            </div>
-
-            <div class="form-group">
-                <label for="telefono">Número de teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +56 9 1234 5678" required autocomplete="tel">
-            </div>
-
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required minlength="6" autocomplete="new-password">
-            </div>
-
-            <div class="form-group">
-                <label for="password2">Repetir contraseña</label>
-                <input type="password" id="password2" name="password2" placeholder="Repite tu contraseña" required minlength="6" autocomplete="new-password">
-            </div>
-
+                            <form class="form-login" action="/registro" method="POST" autocomplete="on" data-parsley-validate>
+                                <h5 class="purple-text text-darken-3 center-align" style="font-weight: 700;">Crear cuenta</h5>
+                                <div class="input-field">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required autocomplete="given-name" data-parsley-required="true">
+                                </div>
+                                <div class="input-field">
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" required autocomplete="family-name" data-parsley-required="true">
+                                </div>
+                                <div class="input-field">
+                                    <label for="rut">RUT</label>
+                                    <input type="text" id="rut" name="rut" placeholder="Ej: 12.345.678-9" required data-parsley-required="true" data-parsley-pattern="^\\d{1,2}\\.\\d{3}\\.\\d{3}-[0-9Kk]$" data-parsley-error-message="Formato de RUT inválido. Ej: 12.345.678-9">
+                                </div>
+                                <div class="input-field">
+                                    <label for="email">Correo electrónico</label>
+                                    <input type="email" id="email" name="email" placeholder="Ej: tucorreo@ejemplo.com" required autocomplete="email" data-parsley-required="true" data-parsley-type="email" data-parsley-pattern="^[a-zA-Z0-9._%+-]+@duoc\\.cl$" data-parsley-error-message="Solo se permiten correos @duoc.cl">
+                                </div>
+                                <div class="input-field">
+                                    <label for="telefono">Número de teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="Ej: +56 9 1234 5678" required autocomplete="tel" data-parsley-required="true" data-parsley-pattern="^\\+?(\\d{1,3})?[\\s\\-]?(\(?\\d{1,4}\\)??[\\s\\-]?){1,4}\\d{1,4}$" data-parsley-error-message="Formato de teléfono inválido.">
+                                </div>
+                                <div class="input-field">
+                                    <label for="password">Contraseña</label>
+                                    <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required minlength="6" autocomplete="new-password" data-parsley-required="true" data-parsley-minlength="6" data-parsley-maxlength="20">
+                                </div>
+                                <div class="input-field">
+                                    <label for="password2">Repetir contraseña</label>
+                                    <input type="password" id="password2" name="password2" placeholder="Repite tu contraseña" required minlength="6" autocomplete="new-password" data-parsley-required="true" data-parsley-equalto="#password" data-parsley-error-message="Las contraseñas no coinciden.">
+                                </div>
                                 <button type="submit" class="btn-iniciosesion">Registrarme</button>
                                 <div class="login-links" style="text-align:center;">
                                     <a href="login.html" class="btn-restablecer">¿Ya tienes cuenta? Inicia sesión</a>
@@ -95,6 +87,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script>
     <script src="assets/main.js"></script>
 </body>
 </html>

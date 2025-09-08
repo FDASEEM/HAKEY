@@ -292,7 +292,7 @@ body.login-bg {
     outline: none;
     transition: border 0.2s, background 0.2s;
     background: rgba(255,255,255,0.15);
-    color: #fff;
+    color: #333; /* Cambiado a gris oscuro para mayor contraste */
 }
 
 .form-login input:focus {
