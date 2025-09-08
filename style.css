@@ -1,6 +1,6 @@
 .logo-hakey {
     display: block;
-    margin: -30px auto -50px auto; /* Reducido el margin-bottom */
+    margin: 10px auto 10px auto; /* Ajustado el margin-top y margin-bottom */
     max-width: 420px;
     width: 100%;
     height: auto;
@@ -293,4 +293,34 @@ body.login-bg {
 
 .login-bg > section .card {
     border-radius: 25px; /* Ajusta este valor para más o menos curva */
+}
+
+/* Estilos para el dropdown de categorías en catalogo.html */
+#genreDropdown {
+    width: 250px; /* Ajusta el ancho según sea necesario */
+    max-height: 300px; /* Altura máxima para mostrar scroll si hay muchas opciones */
+    overflow-y: auto;
+}
+
+#genreDropdown li > label {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#genreDropdown li > label input[type="checkbox"] {
+    margin-right: 10px;
+    position: static; /* Elimina el posicionamiento absoluto de Materialize */
+    opacity: 1; /* Asegura que el checkbox sea visible */
+    pointer-events: auto; /* Permite interacciones con el checkbox */
+}
+
+#genreDropdown li > label span {
+    color: #333; /* Color de texto oscuro para las categorías */
+    font-size: 1rem;
+}
+
+#genreDropdown li:hover {
+    background-color: #eee; /* Fondo claro al pasar el mouse */
 }
