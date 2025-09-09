@@ -11,18 +11,32 @@
 <body class="juego-fondo">
     <nav class="purple darken-3">
         <div class="nav-wrapper container">
-            <a href="index.html" class="brand-logo">
-                <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey" class="logo-hakey" style="height: 56px; padding: 5px;">
-            </a>
+            
             <ul class="right hide-on-med-and-down">
+                <li><a href="index.html" class="waves-effect waves-light">Inicio</a></li>
                 <li><a href="login.html" class="waves-effect waves-light"><i class="material-icons left">person</i>Iniciar Sesión</a></li>
                 <li><a href="cart.html" class="waves-effect waves-light"><i class="material-icons">shopping_cart</i></a></li>
             </ul>
-            <ul class="sidenav" id="mobile-demo">
-                <li><a href="login.html"><i class="material-icons left">person</i>Iniciar Sesión</a></li>
-                <li><a href="cart.html"><i class="material-icons">shopping_cart</i>Carrito</a></li>
-            </ul>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="slide-out" class="sidenav purple darken-3">
+                <li><div class="user-view">
+                <a href="#user"><img class="circle" src="https://via.placeholder.com/60x60/B0B0B0/FFFFFF?text=U"></a>
+                <a href="login.html"><span class="white-text name">Acceder</span></a>
+                <a href="registro.html"><span class="white-text email">Registrarse</span></a>
+            </div></li>
+            <li><a href="index.html" class="waves-effect waves-light white-text"><i class="material-icons white-text">home</i>Inicio</a></li>
+            <li><a href="catalogo.html" class="waves-effect waves-light white-text"><i class="material-icons white-text">games</i>Ver todos los juegos</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">local_offer</i>Ofertas</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">desktop_windows</i>PC Games</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">sports_esports</i>Nintendo</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">videogame_asset</i>Xbox</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">sports_esports</i>PS5</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader white-text">Cuenta</a></li>
+            <li><a class="waves-effect white-text" href="login.html"><i class="material-icons white-text">person</i>Iniciar Sesión</a></li>
+            <li><a class="waves-effect white-text" href="registro.html"><i class="material-icons white-text">person_add</i>Registrarse</a></li>
+        </ul>
+            <div class="hover-trigger"></div>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div> 
     </nav>
 
@@ -75,7 +89,7 @@
                         </div>
                         <div class="row" style="margin-top: 20px;">
                             <div class="col s12">
-                                <a class="waves-effect waves-light btn-large purple darken-3 white-text" style="width: 100%;" id="add-to-cart-btn">
+                                <a class="waves-effect waves-light btn-large purple darken-3 white- text" style="width: 100%;" id="add-to-cart-btn">
                                     <i class="material-icons left">shopping_cart</i>
                                     Añadir al carrito
                                 </a>
@@ -133,7 +147,7 @@
                             <i class="material-icons left">description</i>Descripción del Juego
                         </h5>
                         <div class="divider" style="margin: 15px 0;"></div>
-                        <p class="flow-text" style="line-height: 1.6;" id="game-description">
+                        <p class="flow-text black-text" style="line-height: 1.6;" id="game-description">
                             Cargando descripción...
                         </p>
                         <div class="row" style="margin-top: 20px;">
@@ -167,7 +181,7 @@
                                     <h6 class="red-text text-darken-3">
                                         <i class="material-icons left">warning</i>Requisitos Mínimos
                                     </h6>
-                                    <ul class="browser-default" id="min-requirements">
+                                    <ul class="browser-default black-text" id="min-requirements">
                                         <li>Cargando requisitos...</li>
                                     </ul>
                                 </div>
@@ -177,7 +191,7 @@
                                     <h6 class="green-text text-darken-3">
                                         <i class="material-icons left">check_circle</i>Requisitos Recomendados
                                     </h6>
-                                    <ul class="browser-default" id="rec-requirements">
+                                    <ul class="browser-default black-text" id="rec-requirements">
                                         <li>Cargando requisitos...</li>
                                     </ul>
                                 </div>
@@ -344,9 +358,40 @@
             var tabs = document.querySelectorAll('.tabs');
             var instance = M.Tabs.init(tabs);
 
-            // Inicializar sidenav para móviles
-            var sidenav = document.querySelectorAll('.sidenav');
-            var sidenavInstances = M.Sidenav.init(sidenav);
+            // Inicializar sidenav
+            var sidenav = document.querySelector('.sidenav');
+            var instance = M.Sidenav.init(sidenav, {
+                edge: 'left',
+                draggable: true,
+                preventScrolling: true
+            });
+            
+            // Manejar hover para el sidenav
+            var trigger = document.querySelector('.hover-trigger');
+            var timeoutId;
+            
+            trigger.addEventListener('mouseenter', function() {
+                clearTimeout(timeoutId);
+                sidenav.classList.add('show');
+            });
+            
+            sidenav.addEventListener('mouseenter', function() {
+                clearTimeout(timeoutId);
+            });
+            
+            trigger.addEventListener('mouseleave', function() {
+                timeoutId = setTimeout(() => {
+                    if (!sidenav.matches(':hover')) {
+                        sidenav.classList.remove('show');
+                    }
+                }, 300);
+            });
+            
+            sidenav.addEventListener('mouseleave', function() {
+                timeoutId = setTimeout(() => {
+                    sidenav.classList.remove('show');
+                }, 300);
+            });
         });
     </script>
 </body>
