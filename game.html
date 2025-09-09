@@ -18,11 +18,25 @@
                 <li><a href="login.html" class="waves-effect waves-light"><i class="material-icons left">person</i>Iniciar Sesión</a></li>
                 <li><a href="cart.html" class="waves-effect waves-light"><i class="material-icons">shopping_cart</i></a></li>
             </ul>
-            <ul class="sidenav" id="mobile-demo">
-                <li><a href="login.html"><i class="material-icons left">person</i>Iniciar Sesión</a></li>
-                <li><a href="cart.html"><i class="material-icons">shopping_cart</i>Carrito</a></li>
-            </ul>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="slide-out" class="sidenav purple darken-3">
+                <li><div class="user-view">
+                <a href="#user"><img class="circle" src="https://via.placeholder.com/60x60/B0B0B0/FFFFFF?text=U"></a>
+                <a href="login.html"><span class="white-text name">Acceder</span></a>
+                <a href="registro.html"><span class="white-text email">Registrarse</span></a>
+            </div></li>
+            <li><a href="catalogo.html" class="waves-effect waves-light white-text"><i class="material-icons white-text">games</i>Ver todos los juegos</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">local_offer</i>Ofertas</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">desktop_windows</i>PC Games</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">sports_esports</i>Nintendo</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">videogame_asset</i>Xbox</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">sports_esports</i>PS5</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader white-text">Cuenta</a></li>
+            <li><a class="waves-effect white-text" href="login.html"><i class="material-icons white-text">person</i>Iniciar Sesión</a></li>
+            <li><a class="waves-effect white-text" href="registro.html"><i class="material-icons white-text">person_add</i>Registrarse</a></li>
+        </ul>
+            <div class="hover-trigger"></div>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div> 
     </nav>
 
@@ -344,9 +358,40 @@
             var tabs = document.querySelectorAll('.tabs');
             var instance = M.Tabs.init(tabs);
 
-            // Inicializar sidenav para móviles
-            var sidenav = document.querySelectorAll('.sidenav');
-            var sidenavInstances = M.Sidenav.init(sidenav);
+            // Inicializar sidenav
+            var sidenav = document.querySelector('.sidenav');
+            var instance = M.Sidenav.init(sidenav, {
+                edge: 'left',
+                draggable: true,
+                preventScrolling: true
+            });
+            
+            // Manejar hover para el sidenav
+            var trigger = document.querySelector('.hover-trigger');
+            var timeoutId;
+            
+            trigger.addEventListener('mouseenter', function() {
+                clearTimeout(timeoutId);
+                sidenav.classList.add('show');
+            });
+            
+            sidenav.addEventListener('mouseenter', function() {
+                clearTimeout(timeoutId);
+            });
+            
+            trigger.addEventListener('mouseleave', function() {
+                timeoutId = setTimeout(() => {
+                    if (!sidenav.matches(':hover')) {
+                        sidenav.classList.remove('show');
+                    }
+                }, 300);
+            });
+            
+            sidenav.addEventListener('mouseleave', function() {
+                timeoutId = setTimeout(() => {
+                    sidenav.classList.remove('show');
+                }, 300);
+            });
         });
     </script>
 </body>

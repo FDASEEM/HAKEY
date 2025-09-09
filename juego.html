@@ -18,27 +18,24 @@
                 <li><a href="login.html" class="waves-effect waves-light"><i class="material-icons left">person</i>Iniciar Sesión</a></li>
                 <li><a href="cart.html" class="waves-effect waves-light"><i class="material-icons">shopping_cart</i></a></li>
             </ul>
-            <ul id="slide-out" class="sidenav">
+            <ul id="slide-out" class="sidenav purple darken-3">
                 <li><div class="user-view">
-                  <div class="background">
-                    <img src="assets/img/cover-1920-bd460362.jpg"> <!-- Imagen de fondo -->
-                  </div>
-                  <a href="#user"><img class="circle" src="https://via.placeholder.com/60x60/B0B0B0/FFFFFF?text=U"></a> <!-- Silueta gris para usuario no registrado -->
-                  <a href="login.html"><span class="white-text name">Acceder</span></a>
-                  <a href="registro.html"><span class="white-text email">Registrarse</span></a>
-                </div></li>
-                <li><a href="index.html" class="waves-effect waves-light"><i class="material-icons">home</i>Inicio</a></li>
-                <li><a href="catalogo.html" class="waves-effect waves-light"><i class="material-icons">games</i>Ver todos los juegos</a></li>
-                <li><a href="#" class="waves-effect waves-light"><i class="material-icons">local_offer</i>Ofertas</a></li>
-                <li><a href="#" class="waves-effect waves-light"><i class="material-icons">desktop_windows</i>PC Games</a></li>
-                <li><a href="#" class="waves-effect waves-light"><i class="material-icons">videogame_asset</i>Xbox</a></li>
-                <li><a href="#" class="waves-effect waves-light"><i class="material-icons">sports_esports</i>PS5</a></li>
-                <li><div class="divider"></div></li>
-                <li><a class="subheader">Cuenta</a></li>
-                <li><a class="waves-effect" href="login.html"><i class="material-icons">person</i>Iniciar Sesión</a></li>
-                <li><a class="waves-effect" href="registro.html"><i class="material-icons">person_add</i>Registrarse</a></li>
-                <li><a href="cart.html" class="waves-effect waves-light"><i class="material-icons">shopping_cart</i>Carrito</a></li>
-            </ul>
+                <a href="#user"><img class="circle" src="https://via.placeholder.com/60x60/B0B0B0/FFFFFF?text=U"></a>
+                <a href="login.html"><span class="white-text name">Acceder</span></a>
+                <a href="registro.html"><span class="white-text email">Registrarse</span></a>
+            </div></li>
+            <li><a href="catalogo.html" class="waves-effect waves-light white-text"><i class="material-icons white-text">games</i>Ver todos los juegos</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">local_offer</i>Ofertas</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">desktop_windows</i>PC Games</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">sports_esports</i>Nintendo</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">videogame_asset</i>Xbox</a></li>
+            <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">sports_esports</i>PS5</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader white-text">Cuenta</a></li>
+            <li><a class="waves-effect white-text" href="login.html"><i class="material-icons white-text">person</i>Iniciar Sesión</a></li>
+            <li><a class="waves-effect white-text" href="registro.html"><i class="material-icons white-text">person_add</i>Registrarse</a></li>
+        </ul>
+            <div class="hover-trigger"></div>
             <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect waves-light"><i class="material-icons">menu</i></a>
         </div> 
     </nav>
@@ -288,11 +285,39 @@
             var tabs = document.querySelectorAll('.tabs');
             var instance = M.Tabs.init(tabs);
 
-            // Inicializar sidenav para móviles
-            var sidenav = document.querySelectorAll('.sidenav');
-            var sidenavInstances = M.Sidenav.init(sidenav, {
-                edge: 'right', // Asegúrate de que apunte al nuevo ID 'slide-out'
-                draggable: true
+            // Inicializar sidenav
+            var sidenav = document.querySelector('.sidenav');
+            var instance = M.Sidenav.init(sidenav, {
+                edge: 'left',
+                draggable: true,
+                preventScrolling: true
+            });
+            
+            // Manejar hover para el sidenav
+            var trigger = document.querySelector('.hover-trigger');
+            var timeoutId;
+            
+            trigger.addEventListener('mouseenter', function() {
+                clearTimeout(timeoutId);
+                sidenav.classList.add('show');
+            });
+            
+            sidenav.addEventListener('mouseenter', function() {
+                clearTimeout(timeoutId);
+            });
+            
+            trigger.addEventListener('mouseleave', function() {
+                timeoutId = setTimeout(() => {
+                    if (!sidenav.matches(':hover')) {
+                        sidenav.classList.remove('show');
+                    }
+                }, 300);
+            });
+            
+            sidenav.addEventListener('mouseleave', function() {
+                timeoutId = setTimeout(() => {
+                    sidenav.classList.remove('show');
+                }, 300);
             });
 
             // Inicializar modal
