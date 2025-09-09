@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="purple darken-3">
+        <div class="nav-wrapper container">
+            
+            <ul class="right hide-on-med-and-down">
+                <li><a href="catalogo.html" class="waves-effect waves-light">Catálogo</a></li>
+                <li><a href="#" class="waves-effect waves-light">Ofertas</a></li>
+                <li><a href="#" class="waves-effect waves-light">PC Games</a></li>
+                <li><a href="#" class="waves-effect waves-light">Nintendo</a></li>
+                <li><a href="#" class="waves-effect waves-light">Xbox</a></li>
+                <li><a href="#" class="waves-effect waves-light">PS5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul id="slide-out" class="sidenav purple darken-3">
+        <li><div class="user-view">
+        <a href="#user"><img class="circle" src="https://via.placeholder.com/60x60/B0B0B0/FFFFFF?text=U"></a>
+        <a href="login.html"><span class="white-text name">Acceder</span></a>
+        <a href="registro.html"><span class="white-text email">Registrarse</span></a>
+    </div></li>
+    <li><a href="catalogo.html" class="waves-effect waves-light white-text"><i class="material-icons white-text">games</i>Ver todos los juegos</a></li>
+    <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">local_offer</i>Ofertas</a></li>
+    <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">desktop_windows</i>PC Games</a></li>
+    <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">sports_esports</i>Nintendo</a></li>
+    <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">videogame_asset</i>Xbox</a></li>
+    <li><a href="#" class="waves-effect waves-light white-text"><i class="material-icons white-text">sports_esports</i>PS5</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader white-text">Cuenta</a></li>
+    <li><a class="waves-effect white-text" href="login.html"><i class="material-icons white-text">person</i>Iniciar Sesión</a></li>
+    <li><a class="waves-effect white-text" href="registro.html"><i class="material-icons white-text">person_add</i>Registrarse</a></li>
+</ul>
+    <div class="hover-trigger"></div>
+
+    <section class="hero">
+        <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey"   class="logo-hakey">
+        <div class="botones-login-registro hero-botones">
+            <a href="login.html" class="btn-login waves-effect waves-light">Iniciar Sesión</a>
+            <a href="registro.html" class="btn-registro waves-effect waves-light">Registrarse</a>
+        </div>
+        <div class="hero-contenido">
+            <h1>¡Bienvenido a HAKEY!</h1>
+            <p>Las mejores Keys al mejor Precio!</p>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <div class="container">
+            <h2 class="center-align white-text" style="font-weight: 700; margin-bottom: 30px;">Juegos en Oferta</h2>
+            <div class="carousel">
+                <a class="carousel-item" href="game.html?id=elden-ring"><img src="https://files.gamesfull.app/uploads/image/2022/02/ELDEN-RING.jpg"></a>
+                <a class="carousel-item" href="game.html?id=the-witcher-3"><img src="https://files.gamesfull.app/uploads/image/2020/05/the-witcher-3-wild-hunt-goty-2923-poster.jpg"></a>
+                <a class="carousel-item" href="game.html?id=cyberpunk-2077"><img src="https://files.gamesfull.app/uploads/image/2020/12/Cyberpunk-2077.jpg"></a>
+                <a class="carousel-item" href="game.html?id=god-of-war"><img src="https://files.gamesfull.app/uploads/image/2022/01/God-of-War.jpg"></a>
+                <a class="carousel-item" href="game.html?id=minecraft"><img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="Juegos-Recomendados" id="catalogo">
+            <div>
+                <h1>Juegos Recomendados!</h1>
+                <p>Descubre los juegos más populares y obtén las mejores ofertas.</p>
+            </div>
+            <div class="juegos-grid">
+                <a href="game.html?id=cyberpunk-2077" class="juego-card">
+                    <img src="https://files.gamesfull.app/uploads/image/2020/12/Cyberpunk-2077.jpg" alt="Cyberpunk 2077">
+                    <div class="juego-info">
+                        <span class="juego-titulo">Cyberpunk 2077</span>
+                        <div class="juego-rating">
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_half</i>
+                        </div>
+                    </div>
+                </a>
+                <a href="game.html?id=red-dead-redemption-2" class="juego-card">
+                    <img src="assets\img\red-dead-redemption-2-2019101812583956_1.jpg" alt="Red Dead Redemption 2">
+                    <div class="juego-info">
+                        <span class="juego-titulo">Red Dead Redemption 2</span>
+                        <div class="juego-rating">
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                        </div>
+                    </div>
+                </a>
+                <a href="game.html?id=donkey-kong-bananza" class="juego-card">
+                    <img src="assets\img\a1f52cd7-cb5b-4244-bb09-19c19229eaf5_16-9-aspect-ratio_default_1051359.jpg" alt="Donkey Kong Bananza">
+                    <div class="juego-info">
+                        <span class="juego-titulo">Donkey Kong Bananza</span>
+                        <div class="juego-rating">
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_half</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_border</i>
+                        </div>
+                    </div>
+                </a>
+                <a href="game.html?id=hollow-knight-silksong" class="juego-card">
+                    <img src="https://files.gamesfull.app/uploads/image/2025/09/hollow-knight-silksong-1757012715967.jpg" alt="Hollow Knight: Silksong">
+                    <div class="juego-info">
+                        <span class="juego-titulo">Hollow Knight: Silksong</span>
+                        <div class="juego-rating">
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_border</i>
+                        </div>
+                    </div>
+                </a>
+                <a href="game.html?id=elden-ring" class="juego-card">
+                    <img src="https://files.gamesfull.app/uploads/image/2022/02/ELDEN-RING.jpg" alt="Elden Ring">
+                    <div class="juego-info">
+                        <span class="juego-titulo">Elden Ring</span>
+                        <div class="juego-rating">
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_half</i>
+                        </div>
+                    </div>
+                </a>
+                <a href="game.html?id=the-witcher-3" class="juego-card">
+                    <img src="https://files.gamesfull.app/uploads/image/2020/05/the-witcher-3-wild-hunt-goty-2923-poster.jpg" alt="The Witcher 3">
+                    <div class="juego-info">
+                        <span class="juego-titulo">The Witcher 3</span>
+                        <div class="juego-rating">
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                        </div>
+                    </div>
+                </a>
+                <a href="game.html?id=god-of-war" class="juego-card">
+                    <img src="https://files.gamesfull.app/uploads/image/2022/01/God-of-War.jpg" alt="God of War">
+                    <div class="juego-info">
+                        <span class="juego-titulo">God of War</span>
+                        <div class="juego-rating">
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_half</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_border</i>
+                        </div>
+                    </div>
+                </a>
+                <a href="game.html?id=minecraft" class="juego-card">
+                    <img src="https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg" alt="Minecraft">
+                    <div class="juego-info">
+                        <span class="juego-titulo">Minecraft</span>
+                        <div class="juego-rating">
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_half</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_border</i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="center" style="margin-bottom: 24px;">
+                <a href="catalogo.html" class="btn-large waves-effect waves-light purple darken-3">
+                    <i class="material-icons left">view_module</i>
+                    Ver todos
+                </a>
+            </div>
+    </section>
+    <footer class="page-footer purple darken-3" style="margin-top: 0;">
+        <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">HAKEY</h5>
+                <p class="grey-text text-lighten-4">Las mejores Keys al mejor precio.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Enlaces</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="catalogo.html">Catálogo</a></li>
+                  <li><a class="grey-text text-lighten-3" href="registro.html">Registro</a></li>
+                  <li><a class="grey-text text-lighten-3" href="login.html">Iniciar Sesión</a></li>
+                  <li><a class="grey-text text-lighten-3" href="mailto:soporte@hakey.com">Soporte</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2025 HAKEY. Todos los derechos reservados.
+            <a class="grey-text text-lighten-4 right" href="#top">Volver arriba</a>
+            </div>
+          </div>
+        </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar sidenav
+    var sidenav = document.querySelector('.sidenav');
+    var instance = M.Sidenav.init(sidenav, {
+        edge: 'left',
+        draggable: true,
+        preventScrolling: true
+    });
+    
+    // Manejar hover para el sidenav
+    var trigger = document.querySelector('.hover-trigger');
+    var timeoutId;
+    
+    trigger.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId);
+        sidenav.classList.add('show');
+    });
+    
+    sidenav.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId);
+    });
+    
+    trigger.addEventListener('mouseleave', function() {
+        timeoutId = setTimeout(() => {
+            if (!sidenav.matches(':hover')) {
+                sidenav.classList.remove('show');
+            }
+        }, 300);
+    });
+    
+    sidenav.addEventListener('mouseleave', function() {
+        timeoutId = setTimeout(() => {
+            sidenav.classList.remove('show');
+        }, 300);
+    });
+
+    var carouselElems = document.querySelectorAll('.carousel');
+    var carouselInstances = M.Carousel.init(carouselElems, {
+        fullWidth: false, // Quitar fullWidth para que Materialize lo centre mejor dentro del container
+        indicators: true,
+        duration: 200,
+        numVisible: 5, // 5 juegos visibles
+        // Eliminar dist y padding para usar el comportamiento por defecto
+    });
+
+    // Auto-avanzar carrusel
+    setInterval(function() {
+        carouselInstances[0].next();
+    }, 4000); // Cambia cada 4 segundos
+
+    const grid = document.getElementById('homeGrid');
+    if (!grid) return; // Exit if grid not found
+
+    function stars(rating) {
+        const full = Math.floor(rating || 0);
+        const half = (rating || 0) % 1 >= 0.5 ? 1 : 0;
+        const empty = 5 - full - half;
+        return `${'<i class="material-icons yellow-text" style="font-size:18px;">star</i>'.repeat(full)}${half ? '<i class="material-icons yellow-text" style="font-size:18px;">star_half</i>' : ''}${'<i class="material-icons yellow-text" style="font-size:18px;">star_border</i>'.repeat(empty)}`;
+    }
+    function firstImage(g) {
+        return Array.isArray(g.images) && g.images.length ? g.images[0] : 'https://via.placeholder.com/600x400/1a033f/ffffff?text=Juego';
+    }
+
+    (async function loadHomeGames() {
+        try {
+            const res = await fetch('games.json');
+            const games = await res.json();
+            const list = Object.entries(games).slice(0, 8).map(([id, g]) => ({ id, ...g }));
+
+            const df = document.createDocumentFragment();
+            list.forEach(g => {
+                const a = document.createElement('a');
+                a.href = `game.html?id=${g.id}`;
+                a.className = 'juego-card';
+                a.innerHTML = `
+                    <img src="${firstImage(g)}" alt="${g.title}">
+                    <div class="juego-info">
+                        <span class="juego-titulo">${g.title}</span>
+                        <div class="juego-rating">${stars(g.rating || 0)}</div>
+                    </div>
+                `;
+                df.appendChild(a);
+            });
+            grid.innerHTML = '';
+            grid.appendChild(df);
+        } catch (e) {
+            console.error('No se pudo cargar games.json', e);
+        }
+    })();
+});
+      </script>
+</body>
+
+
+</html>

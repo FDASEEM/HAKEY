@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - HAKEY</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="juego-fondo">
+    <nav class="purple darken-3">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey" class="logo-hakey" style="height: 56px; padding: 5px;">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="login.html" class="waves-effect waves-light"><i class="material-icons left">person</i>Iniciar Sesión</a></li>
+                <li><a href="registro.html" class="waves-effect waves-light"><i class="material-icons left">person_add</i>Registro</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="assets/img/cover-1920-bd460362.jpg"> <!-- Imagen de fondo -->
+          </div>
+          <a href="#user"><img class="circle" src="https://via.placeholder.com/60x60/B0B0B0/FFFFFF?text=U"></a> <!-- Silueta gris para usuario no registrado -->
+          <a href="login.html"><span class="white-text name">Acceder</span></a>
+          <a href="registro.html"><span class="white-text email">Registrarse</span></a>
+        </div></li>
+        <li><a href="index.html" class="waves-effect waves-light"><i class="material-icons">home</i>Inicio</a></li>
+        <li><a href="catalogo.html" class="waves-effect waves-light"><i class="material-icons">games</i>Ver todos los juegos</a></li>
+        <li><a href="#" class="waves-effect waves-light"><i class="material-icons">local_offer</i>Ofertas</a></li>
+        <li><a href="#" class="waves-effect waves-light"><i class="material-icons">desktop_windows</i>PC Games</a></li>
+        <li><a href="#" class="waves-effect waves-light"><i class="material-icons">videogame_asset</i>Xbox</a></li>
+        <li><a href="#" class="waves-effect waves-light"><i class="material-icons">sports_esports</i>PS5</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Cuenta</a></li>
+        <li><a class="waves-effect" href="login.html"><i class="material-icons">person</i>Iniciar Sesión</a></li>
+        <li><a class="waves-effect" href="registro.html"><i class="material-icons">person_add</i>Registrarse</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    <div class="container" style="margin-top: 24px;">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title purple-text text-darken-3" style="font-weight: 700;">Catálogo de Juegos</span>
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">search</i>
+                        <input id="searchInput" type="text" placeholder="Buscar por título, desarrollador...">
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">filter_list</i>
+                        <a class="dropdown-trigger btn purple darken-3 waves-effect waves-light" href="#!" data-target="genreDropdown" id="dropdownButton">Categorías<i class="material-icons right">arrow_drop_down</i></a>
+                        <ul id="genreDropdown" class="dropdown-content">
+                            <!-- Las categorías se llenarán dinámicamente aquí -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="catalogoGrid" class="juegos-grid"></div>
+        <div id="emptyState" class="center" style="display:none; margin: 24px 0;">
+            <i class="material-icons large grey-text">videogame_asset_off</i>
+            <p class="grey-text">No se encontraron juegos con esos criterios.</p>
+        </div>
+
+        <div class="center-align" style="margin-top: 30px; margin-bottom: 30px;">
+            <ul class="pagination">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active purple darken-3"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="page-footer purple darken-3" style="margin-top: 0;">
+        <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">HAKEY</h5>
+                <p class="grey-text text-lighten-4">Las mejores Keys al mejor precio.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Enlaces</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="index.html#catalogo">Catálogo</a></li>
+                  <li><a class="grey-text text-lighten-3" href="registro.html">Registro</a></li>
+                  <li><a class="grey-text text-lighten-3" href="login.html">Iniciar Sesión</a></li>
+                  <li><a class="grey-text text-lighten-3" href="mailto:soporte@hakey.com">Soporte</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2025 HAKEY. Todos los derechos reservados.
+            <a class="grey-text text-lighten-4 right" href="#top">Volver arriba</a>
+            </div>
+          </div>
+        </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+        // Init Materialize components
+        var elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+
+        const grid = document.getElementById('catalogoGrid');
+        const emptyState = document.getElementById('emptyState');
+        const searchInput = document.getElementById('searchInput');
+        const genreDropdown = document.getElementById('genreDropdown');
+        const dropdownButton = document.getElementById('dropdownButton');
+
+        // Load games
+        let games = {};
+        try {
+            const res = await fetch('games.json');
+            games = await res.json();
+        } catch (e) {
+            console.error('No se pudo cargar games.json', e);
+            M.toast({html: 'Error cargando catálogo', classes: 'red'});
+            return;
+        }
+
+        // Build genre set
+        const genreSet = new Set();
+        const entries = Object.entries(games).map(([id, g]) => ({ id, ...g }));
+        entries.forEach(g => {
+            if (g.genre) {
+                g.genre.split(',').map(x => x.trim()).forEach(cat => { if (cat) genreSet.add(cat); });
+            }
+        });
+
+        // Populate dropdown with genres and checkboxes
+        const frag = document.createDocumentFragment();
+        Array.from(genreSet).sort().forEach(cat => {
+            const li = document.createElement('li');
+            const label = document.createElement('label');
+            const input = document.createElement('input');
+            input.type = 'checkbox';
+            input.className = 'filled-in';
+            input.value = cat;
+            input.addEventListener('change', applyFilters); // Añadir listener para filtrar al cambiar
+
+            const span = document.createElement('span');
+            span.textContent = cat;
+
+            label.appendChild(input);
+            label.appendChild(span);
+            li.appendChild(label);
+            frag.appendChild(li);
+        });
+        genreDropdown.appendChild(frag);
+
+        // Initialize dropdown
+        M.Dropdown.init(dropdownButton, { closeOnClick: false });
+
+        function matchesFilters(game, text, selectedGenres) {
+            const haystack = [game.title, game.developer, game.genre].filter(Boolean).join(' ').toLowerCase();
+            const textOk = !text || haystack.includes(text.toLowerCase());
+            if (!selectedGenres.length) return textOk;
+            const gameGenres = (game.genre || '').split(',').map(x => x.trim());
+            const hasAny = selectedGenres.some(g => gameGenres.includes(g)); // Cambiado a some para cualquier coincidencia
+            return textOk && hasAny;
+        }
+
+        function getFirstImage(game) {
+            if (Array.isArray(game.images) && game.images.length) return game.images[0];
+            return 'https://via.placeholder.com/600x400/1a033f/ffffff?text=Juego';
+        }
+
+        function render(list) {
+            grid.innerHTML = '';
+            if (!list.length) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+            grid.style.display = '';
+            emptyState.style.display = 'none';
+            const df = document.createDocumentFragment();
+            list.forEach(g => {
+                const a = document.createElement('a');
+                a.href = `game.html?id=${g.id}`;
+                a.className = 'juego-card';
+                a.innerHTML = `
+                    <img src="${getFirstImage(g)}" alt="${g.title}">
+                    <div class="juego-info">
+                        <span class="juego-titulo">${g.title}</span>
+                        <div class="juego-rating">
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_half</i>
+                            <i class="material-icons yellow-text" style="font-size:18px;">star_border</i>
+                        </div>
+                    </div>
+                `;
+                df.appendChild(a);
+            });
+            grid.appendChild(df);
+        }
+
+        function getSelectedGenres() {
+            const selected = Array.from(genreDropdown.querySelectorAll('input[type="checkbox"]:checked')).map(input => input.value).filter(Boolean);
+            return selected;
+        }
+
+        function applyFilters() {
+            const text = searchInput.value.trim();
+            const selectedGenres = getSelectedGenres();
+            const filtered = entries.filter(g => matchesFilters(g, text, selectedGenres));
+            render(filtered);
+        }
+
+        searchInput.addEventListener('input', applyFilters);
+        // El listener para el dropdown ya se añadió a cada checkbox durante la creación.
+
+        // Initial render
+        render(entries);
+    });
+    </script>
+</body>
+</html>
+

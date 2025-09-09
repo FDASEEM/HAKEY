@@ -1,0 +1,386 @@
+.logo-hakey {
+    display: block; /* Cambiado de flex a block */
+    position: absolute; /* Mantener absolute para posicionamiento */
+    left: 40px; /* Añadido para mover a la izquierda */
+    top: 40px; /* Añadido para controlar distancia desde arriba */
+    max-width: 380px;
+    width: auto; /* Cambiado de 100% a auto */
+    height: auto;
+    filter: drop-shadow(0 4px 20px rgba(109, 77, 223, 0.4));
+    z-index: 2;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transform-origin: center;
+    animation: logoFloat 5s ease-in-out infinite;
+    margin: 0; /* Eliminado el margen auto */
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.logo-hakey:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 24px rgba(109, 77, 223, 0.4));
+}
+
+.hero-botones .btn-login, .hero-botones .btn-registro, .btn-iniciosesion {
+    background-color: #6d4ddf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    margin-top: 0;
+    outline: none;
+}
+.hero-botones .btn-login:hover, .hero-botones .btn-registro:hover {
+    background-color: #6d4ddf;
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+.hero-botones {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    display: flex;
+    gap: 18px;
+    z-index: 10;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Eliminar el margen predeterminado del body */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Mover aquí la fuente general */
+    background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%); /* Fondo unificado */
+    color: #fff; /* Color de texto por defecto para el body */
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Cambiado de center a flex-start */
+    width: 100%;
+    padding-top: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    min-height: calc(100vh - 400px); /* Ajustado para considerar el logo */
+}
+
+.hero-contenido {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 30px 40px;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(156, 19, 19, 0.1);
+    position: relative; /* Cambiado de absolute a relative */
+    transform: none; /* Eliminado el transform */
+    z-index: 1;
+    max-width: 600px;
+    width: 90%;
+    box-sizing: border-box;
+    margin-top: 40px; /* Agregado margen superior */
+}
+
+.hero-contenido h1 {
+    font-size: 2.5rem; /* Reducido un poco */
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.hero-contenido p {
+    font-size: 1.2rem; /* Reducido un poco */
+    margin-bottom: 0;
+}
+
+.Juegos-Recomendados {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 60vh;
+    /* background: linear-gradient(2500deg, #6d4ddf 0%, #1a033f 100%); */
+    /* color: #fff; */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+
+
+
+
+.juegos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.juego-card {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: #222;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+.juego-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    z-index: 1;
+    transition: transform 0.2s;
+}
+.juego-card .juego-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(26,3,63,0.92) 80%, rgba(26,3,63,0.2) 100%);
+    color: #fff !important;
+    padding: 12px 10px 10px 10px;
+    text-align: center;
+    z-index: 2;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    box-sizing: border-box;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.juego-card .juego-info .juego-titulo {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+.juego-card .juego-info .juego-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+.juego-card:hover img {
+    transform: scale(1.06);
+}
+
+.form-login .btn-login:hover {
+    background: linear-gradient(90deg, #1a033f 0%, #6d4ddf 100%);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+body.login-bg {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.login-bg > section {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login-bg .page-footer {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.juego-card .juego-titulo {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.form-login {
+    max-width: 380px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.10);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    margin: 32px auto 0 auto;
+}
+
+.form-login .form-group {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.form-login input[type="text"],
+.form-login input[type="email"],
+.form-login input[type="tel"],
+.form-login input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #6d4ddf; /* Borde morado */
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+    background: rgba(255,255,255,0.15);
+    color: #333; /* Cambiado a gris oscuro para mayor contraste */
+}
+
+.form-login input:focus {
+    border: 1.5px solid #1a033f;
+    background: rgba(255,255,255,0.25);
+}
+
+.form-login label {
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.form-login button[type="submit"] {
+    width: 100%;
+    margin: 16px 0 8px 0;
+    padding: 12px;
+    background-color: #6d4ddf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.form-login button[type="submit"]:hover {
+    background-color: #5a3fd2;
+    transform: translateY(-2px);
+}
+
+.juego-fondo {
+    background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%);
+}
+
+.login-bg > section .card {
+    border-radius: 25px; /* Ajusta este valor para más o menos curva */
+}
+
+/* Estilos para el dropdown de categorías en catalogo.html */
+#genreDropdown {
+    width: 250px; /* Ajusta el ancho según sea necesario */
+    max-height: 300px; /* Altura máxima para mostrar scroll si hay muchas opciones */
+    overflow-y: auto;
+}
+
+#genreDropdown li > label {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#genreDropdown li > label input[type="checkbox"] {
+    margin-right: 10px;
+    position: static; /* Elimina el posicionamiento absoluto de Materialize */
+    opacity: 1; /* Asegura que el checkbox sea visible */
+    pointer-events: auto; /* Permite interacciones con el checkbox */
+}
+
+#genreDropdown li > label span {
+    color: #333; /* Color de texto oscuro para las categorías */
+    font-size: 1rem;
+}
+
+#genreDropdown li:hover {
+    background-color: #eee; /* Fondo claro al pasar el mouse */
+}
+
+.hover-trigger {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100vh;
+    z-index: 997;
+}
+
+.sidenav {
+    transform: translateX(-105%);
+    transition: transform 0.3s ease-out !important;
+}
+
+.sidenav.show {
+    transform: translateX(0%);
+}
+
+/* Estilos para validación en tiempo real */
+.input-field input.invalid {
+    border-bottom: 2px solid #F72585 !important;
+    box-shadow: 0 1px 0 0 #F72585 !important;
+}
+
+.input-field input.valid {
+    border-bottom: 2px solid #4CAF50 !important;
+    box-shadow: 0 1px 0 0 #4CAF50 !important;
+}
+
+.parsley-errors-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.8em;
+    color: #F72585;
+    transition: 0.3s ease-in;
+    position: relative;
+    top: -15px;
+}
+
+.parsley-errors-list.filled {
+    opacity: 1;
+    margin-top: 5px;
+}
+
+.input-field {
+    margin-bottom: 25px;
+}
+

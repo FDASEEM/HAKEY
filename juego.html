@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk 2077 - HAKEY</title>
+</head>
+<body class="juego-fondo">
+    <nav class="purple darken-3">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets\img\LOGO-removebg-preview.png" alt="Logo Hakey" class="logo-hakey" style="height: 56px; padding: 5px;">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="login.html" class="waves-effect waves-light"><i class="material-icons left">person</i>Iniciar Sesión</a></li>
+                <li><a href="cart.html" class="waves-effect waves-light"><i class="material-icons">shopping_cart</i></a></li>
+            </ul>
+            <ul id="slide-out" class="sidenav">
+                <li><div class="user-view">
+                  <div class="background">
+                    <img src="assets/img/cover-1920-bd460362.jpg"> <!-- Imagen de fondo -->
+                  </div>
+                  <a href="#user"><img class="circle" src="https://via.placeholder.com/60x60/B0B0B0/FFFFFF?text=U"></a> <!-- Silueta gris para usuario no registrado -->
+                  <a href="login.html"><span class="white-text name">Acceder</span></a>
+                  <a href="registro.html"><span class="white-text email">Registrarse</span></a>
+                </div></li>
+                <li><a href="index.html" class="waves-effect waves-light"><i class="material-icons">home</i>Inicio</a></li>
+                <li><a href="catalogo.html" class="waves-effect waves-light"><i class="material-icons">games</i>Ver todos los juegos</a></li>
+                <li><a href="#" class="waves-effect waves-light"><i class="material-icons">local_offer</i>Ofertas</a></li>
+                <li><a href="#" class="waves-effect waves-light"><i class="material-icons">desktop_windows</i>PC Games</a></li>
+                <li><a href="#" class="waves-effect waves-light"><i class="material-icons">videogame_asset</i>Xbox</a></li>
+                <li><a href="#" class="waves-effect waves-light"><i class="material-icons">sports_esports</i>PS5</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Cuenta</a></li>
+                <li><a class="waves-effect" href="login.html"><i class="material-icons">person</i>Iniciar Sesión</a></li>
+                <li><a class="waves-effect" href="registro.html"><i class="material-icons">person_add</i>Registrarse</a></li>
+                <li><a href="cart.html" class="waves-effect waves-light"><i class="material-icons">shopping_cart</i>Carrito</a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect waves-light"><i class="material-icons">menu</i></a>
+        </div> 
+    </nav>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="transparent z-depth-0" style="margin-top: 20px;">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <a href="index.html" class="breadcrumb white-text">Inicio</a>
+                    <a href="#!" class="breadcrumb white-text">Juegos</a>
+                    <a href="#!" class="breadcrumb white-text">Cyberpunk 2077</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <!-- Carousel de imágenes -->
+            <div class="col s12 m8">
+                <div class="card">
+                    <div class="card-content" style="padding: 0;">
+                        <div class="carousel carousel-slider center" data-indicators="true">
+                            <div class="carousel-item" href="#one!">
+                                <img src="https://files.gamesfull.app/uploads/image/2020/12/Cyberpunk-2077.jpg" class="responsive-img" style="height: 400px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item" href="#two!">
+                                <img src="https://files.gamesfull.app/uploads/gallery/2020/12/1-Cyberpunk-2077-300x169.jpg" class="responsive-img" style="height: 400px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item" href="#three!">
+                                <img src="https://files.gamesfull.app/uploads/gallery/2020/12/4-Cyberpunk-2077-300x169.jpg" class="responsive-img" style="height: 400px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item" href="#four!">
+                                <img src="https://files.gamesfull.app/uploads/gallery/2020/12/3-Cyberpunk-2077-300x169.jpg" class="responsive-img" style="height: 400px; object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información de compra -->
+            <div class="col s12 m4">
+                <div class="card hoverable">
+                    <div class="card-content">
+                        <span class="card-title purple-text text-darken-3" style="font-size: 1.8rem; font-weight: 600;">Cyberpunk 2077</span>
+                        <div class="divider" style="margin: 15px 0;"></div>
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="col s12">
+                                <h4 class="purple-text text-darken-3" style="margin: 10px 0; font-weight: 700;">$29.99 USD</h4>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5px; margin-bottom: 0;">
+                            <div class="col s12">
+                                <div id="ratingContainer" class="rating" style="display:flex; align-items:center; gap:4px;"></div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="col s12">
+                                <p class="grey-text text-darken-2" style="margin: 5px 0;">
+                                    <i class="material-icons tiny left">developer_mode</i>
+                                    Desarrollador: CD PROJEKT RED
+                                </p>
+                                <p class="grey-text text-darken-2" style="margin: 5px 0;">
+                                    <i class="material-icons tiny left">category</i>
+                                    Género: RPG, Acción, Mundo Abierto
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col s12">
+                                <a class="waves-effect waves-light btn-large purple darken-3 white-text modal-trigger" style="width: 100%;" href="#modal1">
+                                    <i class="material-icons left">shopping_cart</i>
+                                    Añadir al carrito
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col s6">
+                                <a class="waves-effect waves-light btn-flat purple-text text-darken-3" style="width: 100%;">
+                                    <i class="material-icons left">favorite_border</i>
+                                    Favoritos
+                                </a>
+                            </div>
+                            <div class="col s6">
+                                <a class="waves-effect waves-light btn-flat purple-text text-darken-3" style="width: 100%;">
+                                    <i class="material-icons left">share</i>
+                                    Compartir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs de información -->
+        <div class="row" style="margin-top: 30px;">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content" style="padding: 0;">
+                        <ul class="tabs tabs-fixed-width purple darken-3">
+                            <li class="tab col s4">
+                                <a class="active white-text waves-effect waves-light" href="#descripcion">
+                                    <i class="material-icons left">description</i>Descripción
+                                </a>
+                            </li>
+                            <li class="tab col s4">
+                                <a class="white-text waves-effect waves-light" href="#requisitos">
+                                    <i class="material-icons left">computer</i>Requisitos
+                                </a>
+                            </li>
+                            <li class="tab col s4">
+                                <a class="white-text waves-effect waves-light" href="#reviews">
+                                    <i class="material-icons left">star</i>Reseñas
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="descripcion" class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <h5 class="purple-text text-darken-3">
+                            <i class="material-icons left">description</i>Descripción del Juego
+                        </h5>
+                        <div class="divider" style="margin: 15px 0;"></div>
+                        <p class="flow-text" style="line-height: 1.6;">
+                            Cyberpunk 2077 es una historia de acción y aventura en mundo abierto ambientada en Night City, 
+                            una megalópolis obsesionada con el poder, el glamour y la modificación corporal. Tu personaje es V, 
+                            un mercenario que persigue un implante único que permite alcanzar la inmortalidad.
+                        </p>
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col s12 m6">
+                                <h6 class="purple-text text-darken-3">
+                                    <i class="material-icons left">schedule</i>Duración
+                                </h6>
+                                <p class="grey-text text-darken-2">25-30 horas (historia principal)</p>
+                            </div>
+                            <div class="col s12 m6">
+                                <h6 class="purple-text text-darken-3">
+                                    <i class="material-icons left">language</i>Idiomas
+                                </h6>
+                                <p class="grey-text text-darken-2">Español, Inglés, Francés, Alemán</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="requisitos" class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <h5 class="purple-text text-darken-3">
+                            <i class="material-icons left">computer</i>Requisitos del Sistema
+                        </h5>
+                        <div class="divider" style="margin: 15px 0;"></div>
+                        <div class="row">
+                            <div class="col s12 m6">
+                                <div class="card-panel red lighten-5">
+                                    <h6 class="red-text text-darken-3">
+                                        <i class="material-icons left">warning</i>Requisitos Mínimos
+                                    </h6>
+                                    <ul class="browser-default">
+                                        <li><strong>Sistema:</strong> Windows 10</li>
+                                        <li><strong>Procesador:</strong> Intel Core i5-3570K</li>
+                                        <li><strong>Memoria:</strong> 8 GB RAM</li>
+                                        <li><strong>Gráficos:</strong> NVIDIA GeForce GTX 970</li>
+                                        <li><strong>DirectX:</strong> Versión 12</li>
+                                        <li><strong>Almacenamiento:</strong> 70 GB disponibles</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col s12 m6">
+                                <div class="card-panel green lighten-5">
+                                    <h6 class="green-text text-darken-3">
+                                        <i class="material-icons left">check_circle</i>Requisitos Recomendados
+                                    </h6>
+                                    <ul class="browser-default">
+                                        <li><strong>Sistema:</strong> Windows 10</li>
+                                        <li><strong>Procesador:</strong> Intel Core i7-4790</li>
+                                        <li><strong>Memoria:</strong> 12 GB RAM</li>
+                                        <li><strong>Gráficos:</strong> NVIDIA GeForce GTX 1060</li>
+                                        <li><strong>DirectX:</strong> Versión 12</li>
+                                        <li><strong>Almacenamiento:</strong> 70 GB disponibles</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="reviews" class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <h5 class="purple-text text-darken-3">
+                            <i class="material-icons left">star</i>Reseñas de Usuarios
+                        </h5>
+                        <div class="divider" style="margin: 15px 0;"></div>
+                        
+                        <!-- Ejemplo de reseña -->
+                        <div class="card-panel grey lighten-5" style="margin-bottom: 15px;">
+                            <div class="row" style="margin-bottom: 0;">
+                                <div class="col s2">
+                                    <img src="https://via.placeholder.com/50x50/6d4ddf/ffffff?text=U" class="circle responsive-img" alt="Usuario">
+                                </div>
+                                <div class="col s10">
+                                    <h6 class="purple-text text-darken-3" style="margin-top: 0;">Usuario123</h6>
+                                    <div class="rating">
+                                        <i class="material-icons yellow-text">star</i>
+                                        <i class="material-icons yellow-text">star</i>
+                                        <i class="material-icons yellow-text">star</i>
+                                        <i class="material-icons yellow-text">star</i>
+                                        <i class="material-icons yellow-text">star</i>
+                                    </div>
+                                    <p class="grey-text text-darken-2" style="margin-top: 10px;">
+                                        "Increíble experiencia de juego. Los gráficos son espectaculares y la historia te mantiene enganchado desde el primer momento."
+                                    </p>
+                                    <small class="grey-text">Hace 2 días</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="center">
+                            <a class="waves-effect waves-light btn purple darken-3 white-text">
+                                <i class="material-icons left">add</i>Ver más reseñas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar carousel
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true,
+                indicators: true
+            });
+
+            // Inicializar tabs
+            var tabs = document.querySelectorAll('.tabs');
+            var instance = M.Tabs.init(tabs);
+
+            // Inicializar sidenav para móviles
+            var sidenav = document.querySelectorAll('.sidenav');
+            var sidenavInstances = M.Sidenav.init(sidenav, {
+                edge: 'right', // Asegúrate de que apunte al nuevo ID 'slide-out'
+                draggable: true
+            });
+
+            // Inicializar modal
+            var modals = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(modals);
+        });
+
+        // Cargar rating dinámico según el id del juego
+        (async function loadRating() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const id = params.get('id') || 'cyberpunk-2077';
+                const res = await fetch('games.json');
+                const games = await res.json();
+                const game = games[id];
+                const rating = game && typeof game.rating === 'number' ? game.rating : 0;
+                const full = Math.floor(rating);
+                const half = rating % 1 >= 0.5 ? 1 : 0;
+                const empty = 5 - full - half;
+                const starsHtml = `${'<i class="material-icons yellow-text">star</i>'.repeat(full)}${half ? '<i class="material-icons yellow-text">star_half</i>' : ''}${'<i class=\"material-icons yellow-text\">star_border</i>'.repeat(empty)} <small class="grey-text text-darken-1" style="margin-left:6px;">${rating.toFixed(1)}/5</small>`;
+                const container = document.getElementById('ratingContainer');
+                if (container) container.innerHTML = starsHtml;
+            } catch (e) {
+                console.error('No se pudo cargar el rating', e);
+            }
+        })();
+    </script>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>¡Juego añadido al carrito!</h4>
+            <p>Se ha añadido Cyberpunk 2077 a tu carrito de compras.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Aceptar</a>
+            <a href="cart.html" class="modal-close waves-effect waves-green btn">Ir al carrito</a>
+        </div>
+    </div>
+</body>
+
+
+</html>
