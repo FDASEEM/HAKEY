@@ -1,15 +1,17 @@
 .logo-hakey {
-    display: block;
-    margin: 10px auto 10px auto; /* Ajustado el margin-top y margin-bottom */
-    max-width: 420px;
-    width: 100%;
+    display: block; /* Cambiado de flex a block */
+    position: absolute; /* Mantener absolute para posicionamiento */
+    left: 40px; /* Añadido para mover a la izquierda */
+    top: 40px; /* Añadido para controlar distancia desde arriba */
+    max-width: 380px;
+    width: auto; /* Cambiado de 100% a auto */
     height: auto;
     filter: drop-shadow(0 4px 20px rgba(109, 77, 223, 0.4));
-    position: relative;
     z-index: 2;
     transition: transform 0.3s ease, filter 0.3s ease;
     transform-origin: center;
     animation: logoFloat 5s ease-in-out infinite;
+    margin: 0; /* Eliminado el margen auto */
 }
 
 @keyframes logoFloat {
@@ -72,36 +74,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centrar verticalmente el contenido del hero */
-    flex-grow: 1; /* Permite que el hero ocupe el espacio restante */
-    width: 100%; /* Asegura que el hero ocupe todo el ancho */
-    padding-top: 0; /* Eliminar padding-top, ya que el nav está arriba */
+    justify-content: flex-start; /* Cambiado de center a flex-start */
+    width: 100%;
+    padding-top: 20px;
     overflow: hidden;
-    /* background: linear-gradient(200deg, #6d4ddf 0%, #1a033f 100%); */
-    /* color: #fff; */
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    min-height: calc(100vh - 400px); /* Ajustado para considerar el logo */
 }
 
 .hero-contenido {
     text-align: center;
     background: rgba(0, 0, 0, 0.15);
-    padding: 0px 60px; /* Reducido el padding superior e inferior */
+    padding: 30px 40px;
     border-radius: 18px;
     box-shadow: 0 2px 12px rgba(156, 19, 19, 0.1);
-    position: relative;
+    position: relative; /* Cambiado de absolute a relative */
+    transform: none; /* Eliminado el transform */
     z-index: 1;
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    box-sizing: border-box; /* Incluye padding en el ancho total */
+    max-width: 600px;
+    width: 90%;
+    box-sizing: border-box;
+    margin-top: 40px; /* Agregado margen superior */
 }
 
 .hero-contenido h1 {
-    font-size: 3rem;
-    margin-bottom: 18px;
+    font-size: 2.5rem; /* Reducido un poco */
+    margin-bottom: 16px;
     font-weight: 700;
 }
 
 .hero-contenido p {
-    font-size: 1.3rem;
+    font-size: 1.2rem; /* Reducido un poco */
     margin-bottom: 0;
 }
 
@@ -330,5 +333,54 @@ body.login-bg {
 
 #genreDropdown li:hover {
     background-color: #eee; /* Fondo claro al pasar el mouse */
+}
+
+.hover-trigger {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 100vh;
+    z-index: 997;
+}
+
+.sidenav {
+    transform: translateX(-105%);
+    transition: transform 0.3s ease-out !important;
+}
+
+.sidenav.show {
+    transform: translateX(0%);
+}
+
+/* Estilos para validación en tiempo real */
+.input-field input.invalid {
+    border-bottom: 2px solid #F72585 !important;
+    box-shadow: 0 1px 0 0 #F72585 !important;
+}
+
+.input-field input.valid {
+    border-bottom: 2px solid #4CAF50 !important;
+    box-shadow: 0 1px 0 0 #4CAF50 !important;
+}
+
+.parsley-errors-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.8em;
+    color: #F72585;
+    transition: 0.3s ease-in;
+    position: relative;
+    top: -15px;
+}
+
+.parsley-errors-list.filled {
+    opacity: 1;
+    margin-top: 5px;
+}
+
+.input-field {
+    margin-bottom: 25px;
 }
 
