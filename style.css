@@ -76,10 +76,10 @@ body {
     align-items: center;
     justify-content: flex-start; /* Cambiado de center a flex-start */
     width: 100%;
-    padding-top: 20px;
+    padding-top: 66px;
     overflow: hidden;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-    min-height: calc(100vh - 400px); /* Ajustado para considerar el logo */
+    min-height: 400px
 }
 
 .hero-contenido {

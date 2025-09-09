@@ -9,10 +9,10 @@
     "duration": "25-30 horas (historia principal)",
     "languages": "Español, Inglés, Francés, Alemán",
     "images": [
-      "https://files.gamesfull.app/uploads/image/2020/12/Cyberpunk-2077.jpg",
-      "https://files.gamesfull.app/uploads/gallery/2020/12/1-Cyberpunk-2077-300x169.jpg",
-      "https://files.gamesfull.app/uploads/gallery/2020/12/4-Cyberpunk-2077-300x169.jpg",
-      "https://files.gamesfull.app/uploads/gallery/2020/12/3-Cyberpunk-2077-300x169.jpg"
+      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/ss_0e64170751e1ae20ff8fdb7001a8892fd48260e7.600x338.jpg?t=1756209867",
+      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/ss_af2804aa4bf35d4251043744412ce3b359a125ef.600x338.jpg?t=1756209867",
+      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/ss_4eb068b1cf52c91b57157b84bed18a186ed7714b.1920x1080.jpg?t=1756209867",
+      "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/ss_8640d9db74f7cad714f6ecfb0e1aceaa3f887e58.600x338.jpg?t=1756209867"
     ],
     "minRequirements": [
       "Sistema: Windows 10",
@@ -73,7 +73,7 @@
     "duration": "15-20 horas (historia principal)",
     "languages": "Español, Inglés, Francés, Alemán, Japonés",
     "images": [
-      "assets/img/60eebc8f7133f685eddbffbe43c8da617ba0a5d699f2008f9c31c6119d1792af.avif",
+      "https://files.gamesfull.app/uploads/image/2025/09/hollow-knight-silksong-1757012715967.jpg",
       "https://via.placeholder.com/800x400/4A148C/FFFFFF?text=HK+1",
       "https://via.placeholder.com/800x400/4A148C/FFFFFF?text=HK+2",
       "https://via.placeholder.com/800x400/4A148C/FFFFFF?text=HK+3"
@@ -138,7 +138,7 @@
     "duration": "50-70 horas (historia principal)",
     "languages": "Español, Inglés, Francés, Alemán, Japonés",
     "images": [
-      "https://files.gamesfull.app/uploads/gallery/2022/02/1-Elden-Ring-Deluxe-Edition-300x169.jpg",
+      "https://files.gamesfull.app/uploads/image/2022/02/ELDEN-RING.jpg",
       "https://via.placeholder.com/800x400/1B5E20/FFFFFF?text=ER+1",
       "https://via.placeholder.com/800x400/1B5E20/FFFFFF?text=ER+2",
       "https://via.placeholder.com/800x400/1B5E20/FFFFFF?text=ER+3"
@@ -170,7 +170,7 @@
     "duration": "50+ horas (historia principal)",
     "languages": "Español, Inglés, Francés, Alemán, Polaco",
     "images": [
-      "https://via.placeholder.com/800x400/0D47A1/FFFFFF?text=The+Witcher+3",
+      "https://files.gamesfull.app/uploads/image/2020/05/the-witcher-3-wild-hunt-goty-2923-poster.jpg",
       "https://via.placeholder.com/800x400/0D47A1/FFFFFF?text=TW3+1",
       "https://via.placeholder.com/800x400/0D47A1/FFFFFF?text=TW3+2",
       "https://via.placeholder.com/800x400/0D47A1/FFFFFF?text=TW3+3"
@@ -202,7 +202,7 @@
     "duration": "20-25 horas (historia principal)",
     "languages": "Español, Inglés, Francés, Alemán, Italiano",
     "images": [
-      "https://via.placeholder.com/800x400/263238/FFFFFF?text=God+of+War",
+      "https://files.gamesfull.app/uploads/image/2022/01/God-of-War.jpg",
       "https://via.placeholder.com/800x400/263238/FFFFFF?text=GOW+1",
       "https://via.placeholder.com/800x400/263238/FFFFFF?text=GOW+2",
       "https://via.placeholder.com/800x400/263238/FFFFFF?text=GOW+3"
@@ -234,7 +234,7 @@
     "duration": "Infinita",
     "languages": "Español, Inglés y más",
     "images": [
-      "https://via.placeholder.com/800x400/2E7D32/FFFFFF?text=Minecraft",
+      "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg",
       "https://via.placeholder.com/800x400/2E7D32/FFFFFF?text=MC+1",
       "https://via.placeholder.com/800x400/2E7D32/FFFFFF?text=MC+2",
       "https://via.placeholder.com/800x400/2E7D32/FFFFFF?text=MC+3"
